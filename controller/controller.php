@@ -2,9 +2,16 @@
 class Controller { 
 // Homepage
    public static function StartSite(){
-      $albumList = Model::getAlbums();
-      $artistList = Model::getArtistList();
+      $albumList = Model::getTopAlbums();
+      $artistList = Model::getTopArtistList();
+      // $musicPlayer = Model::getMusicPlayer($album_id);
       include_once('view/homepage.php');
+      return;
+   }
+   // Artist List
+   public static function ArtistPage(){
+      $artistList = Model::getArtistList();
+      include_once('view/artistsList.php');
       return;
    }
    // Error page

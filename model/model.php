@@ -12,7 +12,7 @@ class Model {
     }
     // top 3 artists
     public static function getTopArtistList(){
-        $sql = "SELECT TOP 3 * FROM `artists` ORDER BY `artists`.`name` ASC;";//Список
+        $sql = "SELECT * FROM `artists` ORDER BY RAND() LIMIT 3;";//Список
         $db = new database();
         $item = $db->getAll($sql);
         return $item;
@@ -42,7 +42,7 @@ class Model {
     }
     // top 3 albums
     public static function getTopAlbums(){
-        $sql = "SELECT TOP 3 * FROM `albums` ORDER BY `artists`.`name` ASC;";//Список
+        $sql = "SELECT * FROM `albums` ORDER BY RAND() LIMIT 3;";//Список
         $db = new database();
         $item = $db->getAll($sql);
         return $item;
@@ -63,5 +63,12 @@ class Model {
         $item = $db->getOne($query);
         return $item;
     }
+
+    // public static function getMusicPlayer($album_id){
+    //     $query  = "SELECT `link` FROM `track` WHERE `album_id` = '".$album_id."'";
+    //     $db = new database();
+    //     $item = $db->getOne($query);
+    //     return $item;
+    // }
 }//END CLASS
 ?>

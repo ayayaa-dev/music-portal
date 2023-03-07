@@ -17,13 +17,13 @@
 	<header>
 		<!-- navigation -->
 		<div class="navbar navbar-default" role="navigation">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:100px">
 				<!-- menu -->
-				<div class="collapse navbar-collapse" style="font-size: 20px; text-align: center;">
+				<div class="collapse navbar-collapse" style="font-size: 20px; text-align: center; margin: 0 auto;height:100%">
+					<div class="img-logo" style="position:relative;overflow:hidden;height:100%">
+						<a href="./" class="navbar-brand" style="height:100%;"><img src="images/logo.png" style="width:100%;height:100px;"></img></a>					
+					</div>
 					<div>
-						<div class="img-logo" style="height:100%">
-							<a href="./" class="navbar-brand"><img src="images/logo.png" style="height:100%"></img></a>					
-						</div>
 						<ul class="nav justify-content-center">
 						<?php
 							echo '<li class="nav-item"><a class="nav-link" href="artists">Artists</a></li>';
@@ -41,8 +41,8 @@
 							}
 						?>
 						</ul>
-					</div>		
-				</div>
+					</div>
+				</div>		
 			</nav>
 			<form class="form-inline">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -77,7 +77,7 @@
 		</section>
 	</main>
 	<!-- footer -->
-	<footer>
+	<footer style="display: flex;position:relative;overflow:hidden">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

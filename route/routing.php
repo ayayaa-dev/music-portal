@@ -19,6 +19,8 @@ if(strstr($_SERVER['REQUEST_URI'],'?')){//если найден символ '?'
 // homepage
 if ($route == '' OR $route == 'index.php'){
 	Controller::StartSite();
+} elseif ($route == 'artists'){
+	Controller::ArtistPage();
 }
 else {
 	Controller::error404();

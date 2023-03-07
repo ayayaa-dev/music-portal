@@ -14,9 +14,10 @@ class ModelAlbums {
             $name = $_POST['name'];
             $picture=$_POST['picture'];
             $release_date=$_POST['release_date'];
+            $genre = $_POST['genre'];
             $artist_id=$_POST['artist_id'];
             if($name!="" && $artist_id!=""){
-                $sql="INSERT INTO `albums` (`name`, `picture`, `release_date`,`artist_id`)VALUES ('$name','$picture','$release_date','$artist_id')";
+                $sql="INSERT INTO `albums` (`name`, `picture`, `release_date`,`genre`,`artist_id`)VALUES ('$name','$picture','$release_date','$genre','$artist_id')";
                 $database = new database();
                 $item = $database -> executeRun($sql);
                 if($item==true) $result = true;
@@ -30,10 +31,10 @@ class ModelAlbums {
             $name = $_POST['name'];
             $picture=$_POST['picture'];
             $release_date=$_POST['release_date'];
+            $genre = $_POST['genre'];
             $artist_id=$_POST['artist_id'];
             // $updated_at = date('Y-m-d');
-            $sql="UPDATE `albums` SET `name`='$name', `picture`='$picture', `release_date`='$release_date', `artist_id`='$artist_id' WHERE `albums`.`id` =
-            '".$id."'";
+            $sql="UPDATE `albums` SET `name`='$name', `picture`='$picture', `release_date`='$release_date', `genre` = '$genre',`artist_id`='$artist_id' WHERE `albums`.`id` ='".$id."'";
             $database = new database();
             $item = $database -> executeRun($sql);
             if($item==true) $result = true;
@@ -51,4 +52,3 @@ class ModelAlbums {
         return $result;
     }
 }
-?>
