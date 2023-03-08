@@ -9,7 +9,6 @@
 	<!-- custom -->	
 	<!-- <link href="public/css/templatemo-style.css" rel="stylesheet">	 -->
 	<link href="public/css/style.css" rel="stylesheet">
-	<link href="public/css/search.css" rel="stylesheet">
 	<link href="public/css/login.css" rel="stylesheet">
 </head>
 <body>
@@ -24,7 +23,7 @@
 						<a href="./" class="navbar-brand" style="height:100%;"><img src="images/logo.png" style="width:100%;height:100px;"></img></a>					
 					</div>
 					<div>
-						<ul class="nav justify-content-center">
+						<ul class="nav justify-content-center" style="color: black;">
 						<?php
 							echo '<li class="nav-item"><a class="nav-link" href="artists">Artists</a></li>';
 							echo '<li class="nav-item"><a class="nav-link" href="albums">Albums</a></li>';
@@ -77,7 +76,7 @@
 		</section>
 	</main>
 	<!-- footer -->
-	<footer style="display: flex;position:relative;overflow:hidden">
+	<footer>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">

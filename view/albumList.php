@@ -1,19 +1,19 @@
 <?php
     ob_start();
-    $title = "Artists"
+    $title = "Albums"
 ?>
 <div style="text-align: center;">
-    <h3>List of all artists in the world</h3>
+    <h3>List of all albums in the world</h3>
 </div>
 <div style="display:flex;flex-direction:row;flex-wrap:wrap">
     <?php
-        foreach ($artistList as $artist) {
+        foreach ($albumList as $album) {
             echo '<div style="display:flex;flex-direction: column;text-align:center;width:25%;margin-bottom:16px;">';
-            echo '<a href="artist?'.$artist['id'].'" style="font-size: 18px;text-decoration: none; color: black;">';
+            echo '<a href="album?'.$album['id'].'" style="font-size: 18px;text-decoration: none; color: black;">';
             echo '<div style="display: flex; justify-content: center;">';
-            echo '<img src="'.$artist['picture'].'" style="width:250px; height: 250px">';
+            echo '<img src="'. $album['picture'] . '" style="width:250px; height: 250px; horizontal-align: middle;">';
             echo '</div>';
-            echo '<a href="artist?'.$artist['id'].'" style="font-size: 18px;text-decoration: none; color: black;">'.$artist['name'].'</a>';
+            echo '<p style="font-size: 18px;">'.$album['name'].'</p>';
             echo '</div></a>';
         }
     ?>

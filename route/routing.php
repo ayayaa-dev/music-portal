@@ -21,6 +21,8 @@ if ($route == '' OR $route == 'index.php'){
 	Controller::StartSite();
 } elseif ($route == 'artists'){
 	Controller::ArtistPage();
+} elseif ($route == 'albums'){
+	Controller::AlbumPage();
 }
 else {
 	Controller::error404();

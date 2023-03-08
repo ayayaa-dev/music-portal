@@ -10,6 +10,7 @@ html {
     -ms-text-size-adjust: 100%;
 }
 body {
+    display: flex;
     margin: 0;
 }
 article,

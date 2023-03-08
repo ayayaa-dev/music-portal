@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 07 2023 г., 14:10
+-- Время создания: Мар 08 2023 г., 08:16
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.6
 
@@ -150,7 +150,90 @@ INSERT INTO `tracks` (`id`, `name`, `time`, `link`, `album_id`) VALUES
 (55, 'Blame It on Baby', '2:05', 'https://open.spotify.com/embed/track/0jWm0VyD8p3MrSInczpows', 3),
 (56, 'Nasty (feat. Ashanti and Megan Thee Stallion)', '3:35', 'https://open.spotify.com/embed/track/3oHiR89Y8gn6xt3YGAAzFj', 3),
 (57, 'Amazing Grace', '1:28', 'https://open.spotify.com/embed/track/2ulB68v8LGCfQMk0giZZ5S', 3),
-(58, 'Go Again (Intro)', '2:06', 'https://open.spotify.com/embed/track/7gDBTPpsYhVi93lvhVTJWZ', 4);
+(58, 'Go Again (Intro)', '2:06', 'https://open.spotify.com/embed/track/7gDBTPpsYhVi93lvhVTJWZ', 4),
+(59, 'DROP DAT DISS', '1:23', 'https://open.spotify.com/embed/track/5aY8pxe3u3rl98FopxIrYI', 4),
+(60, 'BOOGEYMAN', '2:06', 'https://open.spotify.com/embed/track/6L0rK2juHEuBLGrWuk6XBY', 4),
+(61, 'SOCKS', '2:51', 'https://open.spotify.com/embed/track/060dZ7q9HN8nAS2zn2hwo5', 4),
+(62, 'NO CONDOM', '1:43', 'https://open.spotify.com/embed/track/5y2URMhsmlq61BnLEshtso', 4),
+(63, 'SUMMA DAT', '1:23', 'https://open.spotify.com/embed/track/1YAg60LPOdZvdnr3jYNXz7', 4),
+(64, 'STILL', '2:29', 'https://open.spotify.com/embed/track/4OAzzSZjuXlLEGMdPIyl2B', 4),
+(65, 'ACT THAT HARD', '2:03', 'https://open.spotify.com/embed/track/2xL24f7CkmtEsV1QeJkJjv', 4),
+(66, 'KEEP IT CUT', '2:16', 'https://open.spotify.com/embed/track/6coPF7BM2xaMhZum2ohu4p', 4),
+(67, 'ONE MAN ARMY', '2:13', 'https://open.spotify.com/embed/track/4qMMZ0Bh5sA6Gb3QrcD2Bp', 4),
+(68, 'CALL OF DUTY', '1:15', 'https://open.spotify.com/embed/track/4g6wGjvkEa9XDuJGw84Krs', 4),
+(69, 'THAT\'S WHY I CREEP', '3:19', 'https://open.spotify.com/embed/track/3bl0IUf9Yd9LEfLsIQyovA', 4),
+(70, 'BLANK (feat. Anthony Hamilton)', '3:19', 'https://open.spotify.com/embed/track/62vWechOpCFotPUsE8KAq4', 4),
+(71, 'DON\'T LET ME LIE', '2:17', 'https://open.spotify.com/embed/track/1ZsPRVrIiwfBaY2SpyLfja', 4),
+(72, 'Foreword', '0:13', 'https://open.spotify.com/embed/track/6XIo5wBODGRWwFhifFKKT0', 5),
+(73, 'Don\'t Stay', '3:07', 'https://open.spotify.com/embed/track/2yss0n7KmvmSr4EHvjfFpn', 5),
+(74, 'Somewhere I Belong', '3:33', 'https://open.spotify.com/embed/track/3fjmSxt0PskST13CSdBUFx', 5),
+(75, 'Lying from You', '2:55', 'https://open.spotify.com/embed/track/4qVR3CF8FuFvHN4L6vXlB1', 5),
+(76, 'Hit the Floor', '2:44', 'https://open.spotify.com/embed/track/4wHktoSf6C0C0fAO8IIWqs', 5),
+(77, 'Easier to Run', '3:24', 'https://open.spotify.com/embed/track/32fEW4jygJjjnZh2iBa5IR', 5),
+(78, 'Faint', '2:42', 'https://open.spotify.com/embed/track/7AB0cUXnzuSlAnyHOqmrZr', 5),
+(79, 'Figure.09', '3:17', 'https://open.spotify.com/embed/track/0rPTPahzhGx9LSzI8XX5OM', 5),
+(80, 'Breaking the Habit', '3:16', 'https://open.spotify.com/embed/track/3dxiWIBVJRlqh9xk144rf4', 5),
+(81, 'From the Inside', '2:53', 'https://open.spotify.com/embed/track/697M5JB8FDIyRXEXgl1pBZ', 5),
+(82, 'Nobody\'s Listening', '2:58', 'https://open.spotify.com/embed/track/1EU3VuKGZOvd1HTkxLPUXK', 5),
+(83, 'Session', '2:23', 'https://open.spotify.com/embed/track/00VKR5XH5jid1AgUdFz4bs', 5),
+(84, 'Numb', '3:05', 'https://open.spotify.com/embed/track/1y1sChqjzdNWzwdHQADMrR', 5),
+(85, 'Nobody Can Save Me', '3:45', 'https://open.spotify.com/embed/track/3dJj6o9o1fRgrojWjailuz', 6),
+(86, 'Good Goodbye (feat. Pusha T and Stormzy)', '3:31', 'https://open.spotify.com/embed/track/650OeHTLxZAQmb4aEbGmaA', 6),
+(87, 'Talking to Myself', '3:51', 'https://open.spotify.com/embed/track/7nAfXgeHfDO50upcOjJOaq', 6),
+(88, 'Battle Symphony', '3:36', 'https://open.spotify.com/embed/track/3FQCJI2t5LTbsRPfYVBSVB', 6),
+(89, 'Invisible', '3:34', 'https://open.spotify.com/embed/track/6OocN63GLU7NF0wHdewhID', 6),
+(90, 'Heavy (feat. Kiiara)', '2:49', 'https://open.spotify.com/embed/track/104buTcnP2AsxqB7U1FIZ4', 6),
+(91, 'Sorry for Now', '3:23', 'https://open.spotify.com/embed/track/34isqXjbTstbYwl2MfdzDq', 6),
+(92, 'Halfway Right', '3:37', 'https://open.spotify.com/embed/track/1KvyBpAxgllKW7bQb0GYCR', 6),
+(93, 'One More Light', '4:15', 'https://open.spotify.com/embed/track/3xXBsjrbG1xQIm1xv1cKOt', 6),
+(94, 'Sharp Edges', '2:58', 'https://open.spotify.com/embed/track/6c0I7CfL9ziGZN8yYkLppP', 6),
+(95, 'Do I Wanna Know?', '4:32', 'https://open.spotify.com/embed/track/5FVd6KXrgO9B3JPmC8OPst', 7),
+(96, 'R U Mine?', '3:21', 'https://open.spotify.com/embed/track/2AT8iROs4FQueDv2c8q2KE', 7),
+(97, 'One For The Road', '3:26', 'https://open.spotify.com/embed/track/6wNUBZNWFxdUGof6vkaykE', 7),
+(98, 'Arabella', '3:27', 'https://open.spotify.com/embed/track/7nzsY8vlnKdvGOEE0rjAXZ', 7),
+(99, 'I Want It All', '3:05', 'https://open.spotify.com/embed/track/1j9rezdE3YeC7yktZXC1em', 7),
+(100, 'No. 1 Party Anthem', '4:03', 'https://open.spotify.com/embed/track/5TTGoX70AFrTvuEtqHK37S', 7),
+(101, 'Mad Sounds', '3:35', 'https://open.spotify.com/embed/track/75n7mraeMycQOl2sDGYaTe', 7),
+(102, 'Fireside', '3:01', 'https://open.spotify.com/embed/track/4atMrAadB7dS8xn9vfk9PQ', 7),
+(103, 'Why\'d You Call Me When You\'re High?', '2:41', 'https://open.spotify.com/embed/track/086myS9r57YsLbJpU0TgK9', 7),
+(104, 'Snap Out It', '3:13', 'https://open.spotify.com/embed/track/0NdTUS4UiNYCNn5FgVqKQY', 7),
+(105, 'Knee Socks', '4:17', 'https://open.spotify.com/embed/track/2LGdO5MtFdyphi2EihANZG', 7),
+(106, 'I Wanna Be Yours', '3:03', 'https://open.spotify.com/embed/track/5XeFesFbtLpXzIVDNQP22n', 7),
+(107, 'Brainstorm', '2:52', 'https://open.spotify.com/embed/track/7f9I5WdyXm5q1XqnSYgQZb', 8),
+(108, 'Teddy Picker', '2:45', 'https://open.spotify.com/embed/track/5kxVyCgEUND7E2QKG7JmoF', 8),
+(109, 'D Is For Dangerous', '2:18', 'https://open.spotify.com/embed/track/5RrHzXKmwVd5BCq4UzyJPd', 8),
+(110, 'Balaclava', '2:51', 'https://open.spotify.com/embed/track/0ftMOhVfFm5Wbs5sZdEtsC', 8),
+(111, 'Fluorescent Adolescent', '3:03', 'https://open.spotify.com/embed/track/2x8evxqUlF0eRabbW2JBJd', 8),
+(112, 'Only Ones Who Know', '3:04', 'https://open.spotify.com/embed/track/71ytDkCnYc11VRiRCrhDHX', 8),
+(113, 'Do Me a Favour', '3:29', 'https://open.spotify.com/embed/track/2BqfIlpahcebJPeu1IUTEo', 8),
+(114, 'This House is a Circus', '3:11', 'https://open.spotify.com/embed/track/0DKvcH4SCRdhVYTxStKx9h', 8),
+(115, 'If You Were There, Beware', '3:11', 'https://open.spotify.com/embed/track/4N2yjWLIxZjOXDrCu2VlJe', 8),
+(116, 'The Bad Thing', '2:25', 'https://open.spotify.com/embed/track/4N2yjWLIxZjOXDrCu2VlJe', 8),
+(117, 'Old Yellow Bricks', '3:13', 'https://open.spotify.com/embed/track/5KGbRvZyVyKP2AEJMHErB4', 8),
+(118, '505', '4:13', 'https://open.spotify.com/embed/track/0BxE4FqsDD1Ot4YuBXwAPp', 8),
+(119, 'Feel Invincible', '3:49', 'https://open.spotify.com/embed/track/0i8JFpqe9cKwnrcvoNgl1L', 9),
+(120, 'Back from the Dead', '3:33', 'https://open.spotify.com/embed/track/7y9l4rJLsXQMHciCNSgZmi', 9),
+(121, 'Stars', '3:45', 'https://open.spotify.com/embed/track/6VMT3SzIMbNoR5lsUsniQY', 9),
+(122, 'I Want to Live', '3:28', 'https://open.spotify.com/embed/track/4Ahphc0UzRSoMpJRHgnGQK', 9),
+(123, 'Undefeated', '3:35', 'https://open.spotify.com/embed/track/7sCQbcrVlIKoIjOpR3Oj5N', 9),
+(124, 'Famous', '3:18', 'https://open.spotify.com/embed/track/03zjj8Ni3NQqInP6FQ25v2', 9),
+(125, 'Lions', '3:24', 'https://open.spotify.com/embed/track/1x3WrdMnerhhGiCixoO0z4', 9),
+(126, 'Out of Hell', '3:34', 'https://open.spotify.com/embed/track/6lzmirX8hoaDFy7vrojXJN', 9),
+(127, 'Burn It Down', '3:16', 'https://open.spotify.com/embed/track/3WM6KIuUPyROwLoADaSxfg', 9),
+(128, 'Watching for Comets', '3:29', 'https://open.spotify.com/embed/track/4rEewUBeCHGkKoPX4DJNq1', 9),
+(129, 'Saviors of the World', '3:46', 'https://open.spotify.com/embed/track/048rIiP977BBiepIeLKaYA', 9),
+(130, 'The Resistance', '3:52', 'https://open.spotify.com/embed/track/5O9Dz0h08LuBi0aVvDcylh', 9),
+(131, 'Rebirthing', '3:53', 'https://open.spotify.com/embed/track/1OG0QQa2zZe4QeFwVhCiiA', 10),
+(132, 'The Last Night', '3:30', 'https://open.spotify.com/embed/track/37CMjUAU8fL6YqZVTplZqZ', 10),
+(133, 'Yours to Hold', '3:41', 'https://open.spotify.com/embed/track/42uZaQsVFvj5g6nMF3ZwNY', 10),
+(134, 'Better Than Drugs', '3:57', 'https://open.spotify.com/embed/track/2stwPgrh5NpNr8PdiIPEhE', 10),
+(135, 'Comatose', '3:50', 'https://open.spotify.com/embed/track/5pRElcsPZrgZXkoON2o5Go', 10),
+(136, 'The Older I Get', '3:38', 'https://open.spotify.com/embed/track/61N3CssJfDd8d4JJlGtqGL', 10),
+(137, 'Those Nights', '3:46', 'https://open.spotify.com/embed/track/1ZWEsoqJSrtZA1qjlG02Hp', 10),
+(140, 'Falling Inside The Black', '3:30', 'https://open.spotify.com/embed/track/4AVxmpwfXH7p4YyTbg9nS4', 10),
+(141, 'Say Goodbye', '4:16', 'https://open.spotify.com/embed/track/1OEATzM7c24RLUKX8rQVBg', 10),
+(142, 'Whispers in the Dark', '3:24', 'https://open.spotify.com/embed/track/6rSuL1ViLO7Aljn2WD09s4', 10),
+(143, 'Looking for Angels', '4:31', 'https://open.spotify.com/embed/track/7cUtgnZO3tbOfIAUCG9VWd', 10);
 
 -- --------------------------------------------------------
 
@@ -224,7 +307,7 @@ ALTER TABLE `artists`
 -- AUTO_INCREMENT для таблицы `tracks`
 --
 ALTER TABLE `tracks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
