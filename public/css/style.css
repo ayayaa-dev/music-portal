@@ -23,12 +23,10 @@ h3 {
 .trackList {
     display: flex;
     flex-direction: column;
-    border: 1px solid;
     text-align: left;
 }
 
 .album_div {
-    border: 1px solid;
     text-align: center;
     margin: 20px;
     align-items: center;
@@ -36,15 +34,16 @@ h3 {
 }
 
 .album_mid_div {
-    border: 1px solid;
     display: flex;
+    border: 1px solid;
     flex-direction: row;
 }
 
 .album_mini_div {
-    /* border: 1px solid; */
+    border: 1px solid;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 .album_cover {
@@ -53,7 +52,6 @@ h3 {
 }
 
 .album_name_div {
-    border: 1px solid;
     display: flex;
     justify-content: center;
     width: 100%;

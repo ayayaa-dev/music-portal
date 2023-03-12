@@ -17,7 +17,7 @@ class Controller {
    // Album List
    public static function AlbumPage(){
       $albumList = Model::getAlbums();
-      $trackList = Model::get3TrackByAlbum(9);
+      $trackList = Model::get3TrackByAlbum(2);
       include_once('view/albumList.php');
       return;
    }

@@ -25,20 +25,37 @@ $title = "Albums"
 
         echo '</div>';
 
-        echo '<div class = "trackList">';
-        echo '<tr>';
+        echo '<div style = width:100%; height:100%;>';
+        echo '<table class="table table-striped"style="padding: 20px;">';
+
+        echo '<tr>
+        <th style="width: 18%"></th>
+        <th style="width: 82%"></th>
+        </tr>';
         foreach ($trackList as $tracks) {
-            echo ' <td class = "trackList"> <p>' . $tracks['name'] . '</p></td>';
+            echo '<tr>';
+            echo '<td> <p>' . $tracks['name'] . '</p></td>';
+            echo '<td> <p>' . $tracks['time'] . '</p> </td>';
+            echo '</tr>';
         }
-        echo '</tr>';
+        echo ' </table>';
 
         echo '</div>';
 
         echo '</div>';
 
+        echo '<div>';
+        echo '<div>';
+        echo '<a href="album?' . $album['id'] . '" style="font-size: 18px;text-decoration: none; color: black;">';
+        echo '<button>More Info</button>';
+        echo '</div>';
+        echo '</div>';
+
         echo '</div>';
 
 
+
+        // old design
         // echo '<div style="display:flex;flex-direction: column;text-align:center;width:25%;margin-bottom:16px;">';
         // echo '<a href="album?'.$album['id'].'" style="font-size: 18px;text-decoration: none; color: black;">';
         // echo '<div style="display: flex; justify-content: center;">';

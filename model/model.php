@@ -63,10 +63,10 @@ class Model {
         $item = $db->getOne($query);
         return $item;
     }
-
+    //GET 3 tracks by artist on Album Page
     public static function get3TrackByAlbum($albumid)
     {
-        $sql = "SELECT `name`  FROM `Tracks` WHERE `album_id`= '" . $albumid . "' LIMIT 3";
+        $sql = "SELECT `name`, `time`  FROM `Tracks` WHERE `album_id`= '" . $albumid . "' LIMIT 3";
         $db = new database();
         $item = $db->getAll($sql);
         return $item;
