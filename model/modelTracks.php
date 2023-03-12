@@ -8,6 +8,7 @@ class ModelTracks {
         return $item;
     }
 
+
     public static function tracksAddResult() {
         $result = false;
         if(isset($_POST['send'])){
