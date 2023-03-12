@@ -64,6 +64,14 @@ class Model {
         return $item;
     }
 
+    public static function get3TrackByAlbum($albumid)
+    {
+        $sql = "SELECT `name`  FROM `Tracks` WHERE `album_id`= '" . $albumid . "' LIMIT 3";
+        $db = new database();
+        $item = $db->getAll($sql);
+        return $item;
+    }
+
     // public static function getMusicPlayer($album_id){
     //     $query  = "SELECT `link` FROM `track` WHERE `album_id` = '".$album_id."'";
     //     $db = new database();

@@ -1,18 +1,73 @@
-html,body {
-   margin:0;
-   padding:0;
-   height:100%;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
+
 ul li a {
-   color: black !important; 
+    color: black !important;
 }
+
 h3 {
     margin: 20px;
 }
-footer {
-   position:fixed;
-   bottom:0;
-   width:100%;
-   height:80px;   /* Height of the footer */
 
+.album {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.trackList {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    text-align: left;
+}
+
+.album_div {
+    border: 1px solid;
+    text-align: center;
+    margin: 20px;
+    align-items: center;
+    width: 600px;
+}
+
+.album_mid_div {
+    border: 1px solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.album_mini_div {
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.album_cover {
+    width: 250px;
+    height: 250px;
+}
+
+.album_name_div {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.album_name {
+    font-size: 18px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    /* Height of the footer */
 }
