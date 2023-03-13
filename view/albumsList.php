@@ -47,30 +47,11 @@ $title = "Albums"
         echo '<div>';
         echo '<div>';
         echo '<a href="album?' . $album['id'] . '" style="font-size: 18px;text-decoration: none; color: black;">';
-<<<<<<< Updated upstream:view/albumList.php
-        echo '<button>More Info</button>';
-        echo '</div>';
-        echo '</div>';
-
-        echo '</div>';
-
-
-
-        // old design
-        // echo '<div style="display:flex;flex-direction: column;text-align:center;width:25%;margin-bottom:16px;">';
-        // echo '<a href="album?'.$album['id'].'" style="font-size: 18px;text-decoration: none; color: black;">';
-        // echo '<div style="display: flex; justify-content: center;">';
-        // echo '<img src="'. $album['picture'] . '" style="width:250px; height: 250px; horizontal-align: middle;">';
-        // echo '</div>';
-        // echo '<p style="font-size: 18px;">'.$album['name'].'</p>';
-        // echo '</div></a>';
-=======
         echo '<button>More Info</button></a>';
         echo '</div>';
         echo '</div>';
 
         echo '</div>';
->>>>>>> Stashed changes:view/albumsList.php
     }
     ?> </div>
 <?php

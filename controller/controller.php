@@ -23,18 +23,15 @@ class Controller {
    // Album List
    public static function AlbumsPage(){
       $albumList = Model::getAlbums();
-      $trackList = Model::get3TrackByAlbum(2);
-<<<<<<< Updated upstream
-      include_once('view/albumList.php');
-=======
+      $trackList = Model::get3TrackByAlbum(9);
       include_once('view/albumsList.php');
       return;
    }
    // Single album info
    public static function AlbumInfoPage($id){
       $album = Model::getAlbumById($id);
+      $tracks = Model::getTracksByAlbum($id);
       include_once('view/albumInfo.php');
->>>>>>> Stashed changes
       return;
    }
    // Error page

@@ -64,12 +64,8 @@ class Model {
         return $item;
     }
     //GET 3 tracks by artist on Album Page
-<<<<<<< Updated upstream
     public static function get3TrackByAlbum($albumid)
     {
-=======
-    public static function get3TrackByAlbum($albumid) {
->>>>>>> Stashed changes
         $sql = "SELECT `name`, `time`  FROM `Tracks` WHERE `album_id`= '" . $albumid . "' LIMIT 3";
         $db = new database();
         $item = $db->getAll($sql);
@@ -90,7 +86,7 @@ class Model {
         return $item;
     }
 
-    // public static function getMusicPlayer($album_id){
+    // public static function getMusicPlayer($album</head>_id){
     //     $query  = "SELECT `link` FROM `track` WHERE `album_id` = '".$album_id."'";
     //     $db = new database();
     //     $item = $db->getOne($query);
