@@ -20,10 +20,22 @@ if(strstr($_SERVER['REQUEST_URI'],'?')){//если найден символ '?'
 if ($route == '' OR $route == 'index.php'){
 	Controller::StartSite();
 } elseif ($route == 'artists'){
-	Controller::ArtistPage();
+	Controller::ArtistsPage();
+} elseif ( $route == 'artist'){
+	if(isset($id)){
+		Controller::ArtistInfoPage($id);
+	} else {
+		Controller::error404();	
+	}
 } elseif ($route == 'albums'){
-	Controller::AlbumPage();
+	Controller::AlbumsPage();
+} elseif ( $route == 'album'){
+	if(isset($id)){
+		Controller::AlbumInfoPage($id);
+	} else {
+		Controller::error404();	
+	}
 }
 else {
 	Controller::error404();
-}
+} 

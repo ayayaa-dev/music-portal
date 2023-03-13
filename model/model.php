@@ -64,11 +64,29 @@ class Model {
         return $item;
     }
     //GET 3 tracks by artist on Album Page
+<<<<<<< Updated upstream
     public static function get3TrackByAlbum($albumid)
     {
+=======
+    public static function get3TrackByAlbum($albumid) {
+>>>>>>> Stashed changes
         $sql = "SELECT `name`, `time`  FROM `Tracks` WHERE `album_id`= '" . $albumid . "' LIMIT 3";
         $db = new database();
         $item = $db->getAll($sql);
+        return $item;
+    }
+    // GET artist by id
+    public static function getArtistById($id) {
+        $sql = "SELECT * FROM `artists` WHERE `ID`='".$id."'";
+        $db = new database();
+        $item = $db -> getOne($sql);
+        return $item;
+    }
+    // GET album by id
+    public static function getAlbumById($id) {
+        $sql = "SELECT * FROM `albums` WHERE `ID`='".$id."'";
+        $db = new database();
+        $item = $db -> getOne($sql);
         return $item;
     }
 

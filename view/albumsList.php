@@ -47,6 +47,7 @@ $title = "Albums"
         echo '<div>';
         echo '<div>';
         echo '<a href="album?' . $album['id'] . '" style="font-size: 18px;text-decoration: none; color: black;">';
+<<<<<<< Updated upstream:view/albumList.php
         echo '<button>More Info</button>';
         echo '</div>';
         echo '</div>';
@@ -63,6 +64,13 @@ $title = "Albums"
         // echo '</div>';
         // echo '<p style="font-size: 18px;">'.$album['name'].'</p>';
         // echo '</div></a>';
+=======
+        echo '<button>More Info</button></a>';
+        echo '</div>';
+        echo '</div>';
+
+        echo '</div>';
+>>>>>>> Stashed changes:view/albumsList.php
     }
     ?> </div>
 <?php
