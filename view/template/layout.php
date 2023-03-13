@@ -78,10 +78,8 @@
 	<!-- footer -->
 	<footer>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>Copyright &copy; 2023 Blackwell Music. Daniil Divissenko, Daniil Vassiljev, Viktoria Minaeva. JPTV20</p>					
-				</div>
+			<div class="col-md-12">
+				<p>Copyright &copy; 2023 Blackwell Music. Daniil Divissenko, Daniil Vassiljev, Viktoria Minaeva. JPTV20</p>					
 			</div>
 		</div>
 	</footer>

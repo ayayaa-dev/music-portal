@@ -21,10 +21,11 @@
         <h4 style="text-align: center;">Our favorite track</h4>
         <?php
             echo '<iframe style="border-radius:12px"
-                  src="https://open.spotify.com/embed/track/5g9lS8deSIxItFBmZRC4vN?utm_source=generator&theme=0" 
+                  src="'.$musicPlayer['link'].'" 
                   width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; 
                   encrypted-media; fullscreen; picture-in-picture" loading="lazy">
                   </iframe>';
+            // echo '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0vjeOZ3Ft5jvAi9SBFJm1j?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>';
         ?>
     </div>
     <div class="col-md-6">

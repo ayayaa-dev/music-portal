@@ -3,7 +3,7 @@
     $title = "Artists"
 ?>
 <div style="text-align: center;">
-    <h3>List of all artists in the world</h3>
+    <h3>List of all artists</h3>
 </div>
 <div style="display:flex;flex-direction:row;flex-wrap:wrap">
     <?php

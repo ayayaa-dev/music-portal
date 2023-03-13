@@ -4,7 +4,7 @@ class Controller {
    public static function StartSite(){
       $albumList = Model::getTopAlbums();
       $artistList = Model::getTopArtistList();
-      // $musicPlayer = Model::getMusicPlayer($album_id);
+      $musicPlayer = Model::getMusicPlayer();
       include_once('view/homepage.php');
       return;
    }
@@ -23,10 +23,11 @@ class Controller {
    // Album List
    public static function AlbumsPage(){
       $albumList = Model::getAlbums();
-      $trackList = Model::get3TrackByAlbum(2);
-<<<<<<< Updated upstream
-      include_once('view/albumList.php');
-=======
+      include_once('view/albumsList.php');
+      return;
+   }
+   public static function AlbumSongs($album_id){
+      $trackList = Model::get3TrackByAlbum($album_id);
       include_once('view/albumsList.php');
       return;
    }
@@ -34,10 +35,8 @@ class Controller {
    public static function AlbumInfoPage($id){
       $album = Model::getAlbumById($id);
       include_once('view/albumInfo.php');
->>>>>>> Stashed changes
       return;
    }
-   // Error page
    public static function error404(){
       include_once('view/error404.php');
       return;

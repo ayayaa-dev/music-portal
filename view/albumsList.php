@@ -3,12 +3,12 @@ ob_start();
 $title = "Albums"
 ?>
 <div style="text-align: center;">
-    <h3>List of all albums in the world</h3>
+    <h3>List of all albums</h3>
 </div>
 <div class="album">
     <?php
     foreach ($albumList as $album) {
-
+        $trackList = Model::get3TrackByAlbum($album['id']);
         echo '<div class = "album_div">';
 
         echo '<div class = "album_mid_div">';
@@ -26,12 +26,12 @@ $title = "Albums"
         echo '</div>';
 
         echo '<div style = width:100%; height:100%;>';
-        echo '<table class="table table-striped"style="padding: 20px;">';
+        echo '<table class="table table-striped"style="padding: 20px; height:100%; vertical-align: middle;">';
 
-        echo '<tr>
-        <th style="width: 18%"></th>
-        <th style="width: 82%"></th>
-        </tr>';
+        // echo '<tr>
+        // <th style="width: 88%"></th>
+        // <th style="width: 12%"></th>
+        // </tr>';
         foreach ($trackList as $tracks) {
             echo '<tr>';
             echo '<td> <p>' . $tracks['name'] . '</p></td>';
@@ -47,8 +47,7 @@ $title = "Albums"
         echo '<div>';
         echo '<div>';
         echo '<a href="album?' . $album['id'] . '" style="font-size: 18px;text-decoration: none; color: black;">';
-<<<<<<< Updated upstream:view/albumList.php
-        echo '<button>More Info</button>';
+        echo '<button>More Info</button></a>';
         echo '</div>';
         echo '</div>';
 
@@ -64,13 +63,6 @@ $title = "Albums"
         // echo '</div>';
         // echo '<p style="font-size: 18px;">'.$album['name'].'</p>';
         // echo '</div></a>';
-=======
-        echo '<button>More Info</button></a>';
-        echo '</div>';
-        echo '</div>';
-
-        echo '</div>';
->>>>>>> Stashed changes:view/albumsList.php
     }
     ?> </div>
 <?php
