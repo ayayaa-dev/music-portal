@@ -41,8 +41,8 @@
                 <?php
                     foreach ($albumList as $album) {
                         echo '<tr>
-                        <td><img src="'.$album['picture'].'" style="width:110px; height: 110px"></td>
-                        <td style="text-align: center;vertical-align: middle;"><a href="artist?'.$album['id'].'" style="font-size: 24px;text-decoration: none; color: black;">'.$album['name'].'</a></td>
+                        <td><img src="'.$album['picture']. '" style="width:110px; height: 110px"></td>
+                        <td style="text-align: center;vertical-align: middle;"><a href="album?' . $album['id'] . '" style="font-size: 24px;text-decoration: none; color: black;">' . $album['name'] . '</a></td>
                         </tr>';
                     }
                 ?>

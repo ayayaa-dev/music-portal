@@ -77,6 +77,8 @@ td {
 .Full_div {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
 }
 
@@ -93,6 +95,25 @@ td {
     height: 100%;
     justify-content: center;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.Album_Name {
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 12px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    /* padding: 5px; */
+}
+
+.name_album {
+    /* font-weight: bold; */
+    text-decoration-line: underline;
+}
+
+.NAME {
+    font-size: 20px;
 }
 
 .border_album {
@@ -105,12 +126,20 @@ td {
 }
 
 .album_img {
-    width: 300px;
+    width: 100%;
     border-radius: 12px;
+}
+
+.Album_Release {
+    border: 3px solid black;
+    border-radius: 12px;
+    color: white;
+    background-color: rgb(60, 60, 60);
 }
 
 .release {
     text-align: center;
+    text-decoration-line: underline;
 }
 
 .Album_Picture {
@@ -119,20 +148,59 @@ td {
 }
 
 .Album_genres {
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 10px;
+    color: white;
+    background-color: rgb(60, 60, 60);
+}
+
+.name_artist {
+    border: 3px solid black;
+    border-radius: 12px;
+    width: 97%;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    margin-top: 10px;
+}
+
+.name {
+    text-decoration-line: underline;
+}
+
+.artist_name {
+    font-size: 20px;
+}
+
+.short_desc_artist {
+    font-size: 15px;
 }
 
 .genre {
     text-align: center;
+    text-decoration-line: underline;
+}
+
+.short_desc {
+    text-decoration-line: underline;
+}
+
+.artist_short_desc {
+    border: 3px solid black;
+    border-radius: 12px;
+    width: 97%;
+    color: white;
+    background-color: rgb(60, 60, 60);
+    margin-bottom: 10px;
 }
 
 .release_Date {
     text-align: center;
+    font-size: 20px;
 }
 
 .genre_list {
     text-align: center;
+    font-size: 20px;
 }
 
 .spotify {
@@ -144,13 +212,37 @@ td {
 .Artist_div {
     width: 50%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+}
+
+.border-artist {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     border: 1px solid black;
+    background-color: rgb(185, 184, 184);
+    border-radius: 12px;
+    width: 90%;
+    height: 100%;
 }
 
 .artist_pic {
-    width: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.artist_image {
+    width: 76%;
+    margin: 10px;
+}
+
+.Artist_Info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    height: 100%;
 }
 
 .Tracks {

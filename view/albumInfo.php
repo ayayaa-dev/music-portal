@@ -18,6 +18,20 @@ if (isset($album) && $album) {
                 </div>
 
                 <div class="Album_Info">
+
+                    <div class="Album_Name">
+                        <div class="name_album">
+                            <h2>Album Name</h2>
+                        </div>
+
+                        <div class="NAME">
+                            <?php
+                            echo '<p>' . $album['name'] . '</p>'
+                            ?>
+                        </div>
+
+                    </div>
+
                     <div class="Album_Release">
                         <div class="release">
                             <h2>Release Date</h2>
@@ -45,31 +59,46 @@ if (isset($album) && $album) {
             </div>
         </div>
 
-
         <div class="Artist_div">
-            <div class="artist_image">
-                <?php
-                $artist = Model::getArtistById($album['artist_id']);
-                echo '<a href="artist?' . $artist['id'] . '">';
-                echo '<img class="artist_pic" src="' . $artist['picture'] . '"></a>'
-                ?>
-            </div>
-            <div class="Artist_Info">
-                <div class="artist_name">
+            <div class="border-artist">
+
+                <div class="artist_image">
                     <?php
                     $artist = Model::getArtistById($album['artist_id']);
-                    echo '<p class = "artist">' . $artist['name'] . '</p>';
+                    echo '<a href="artist?' . $artist['id'] . '">';
+                    echo '<img class="artist_pic" src="' . $artist['picture'] . '"></a>'
                     ?>
                 </div>
 
-                <div class="artist_short_desc">
-                    <?php
-                    $artist = Model::getArtistById($album['artist_id']);
-                    echo '<p class = "artist_desc">' . $artist['short_desc'] . '</p>';
-                    ?>
+                <div class="Artist_Info">
+                    <div class="name_artist">
+                        <div class="name">
+                            <h2>Artist Name</h2>
+                        </div>
+                        <div class="artist_name">
+                            <?php
+                            $artist = Model::getArtistById($album['artist_id']);
+                            echo '<p class = "artist">' . $artist['name'] . '</p>';
+                            ?>
+                        </div>
+                    </div>
+
+                    <div class="artist_short_desc">
+                        <div class="short_desc">
+                            <h3>Short Description</h3>
+                        </div>
+                        <div class="short_desc_artist">
+                            <?php
+                            $artist = Model::getArtistById($album['artist_id']);
+                            echo '<p class = "artist_desc">' . $artist['short_desc'] . '</p>';
+                            ?>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="Tracks_list">
