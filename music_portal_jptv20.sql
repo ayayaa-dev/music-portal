@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 08 2023 г., 08:16
+-- Время создания: Мар 13 2023 г., 14:14
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.6
 
@@ -62,19 +62,20 @@ CREATE TABLE `artists` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `picture` text NOT NULL,
-  `description` text NOT NULL
+  `description` text NOT NULL,
+  `short_desc` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `artists`
 --
 
-INSERT INTO `artists` (`id`, `name`, `picture`, `description`) VALUES
-(1, '2Pac', 'https://cdn.britannica.com/02/162002-050-02512608/Tupac-Shakur-1993.jpg', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor. He is widely considered one of the most influential rappers of all time.Shakur is among the best-selling music artists, having sold more than 75 million records worldwide. Much of Shakur\'s music has been noted for addressing contemporary social issues that plagued inner cities, and he is considered a symbol of activism against inequality.'),
-(2, 'DaBaby', 'https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/1:1/w_800,h_800,c_limit/Dababy_BabyOnBaby.jpg', 'Jonathan Lyndale Kirk (born December 22, 1991), known professionally as DaBaby (formerly known as Baby Jesus), is an American rapper. After releasing several mixtapes between 2014 and 2018, he rose to mainstream prominence with his debut album Baby on Baby (2019), which included the Billboard Hot 100 top ten single \"Suge\".'),
-(3, 'Linkin Park', 'https://townsquare.media/site/366/files/2014/12/Linkin-Park.jpg?w=980&q=75', 'Linkin Park is an American rock band from Agoura Hills, California. The band\'s current lineup comprises vocalist/rhythm guitarist/keyboardist Mike Shinoda, lead guitarist Brad Delson, bassist Dave Farrell, DJ/turntablist Joe Hahn and drummer Rob Bourdon, all of whom are founding members. Vocalists Mark Wakefield and Chester Bennington are former members of the band. Categorized as alternative rock, Linkin Park\'s earlier music spanned a fusion of heavy metal and hip hop, while their later music features more electronica and pop elements.'),
-(4, 'Arctic Monkeys', 'https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f', 'Arctic Monkeys are an English rock band formed in Sheffield in 2002. The group consists of Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O\'Malley (bass guitar, backing vocals), and Matt Helders (drums, backing vocals). Former band member Andy Nicholson (bass guitar, backing vocals) left the band in 2006 shortly after their debut album was released.'),
-(5, 'Skillet', 'https://www.skillet.com/sites/g/files/g2000015186/files/2022-09/Skillet_Site_NewSite_Assets_2560_PressShot3.jpg', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996. The band currently consists of husband John Cooper (lead vocals, bass) and wife Korey Cooper (rhythm guitar, keyboards, backing vocals) along with Jen Ledger (drums, vocals) and Seth Morrison (lead guitar). The band has released eleven albums, two of which, Collide and Comatose, received Grammy nominations. Two of their albums, Comatose and Awake, are certified Platinum and Double Platinum respectively by the RIAA, while Rise and Unleashed are certified Gold as of June 29, 2020. Four of their songs, \"Monster\", \"Hero\", \"Awake and Alive\", and \"Feel Invincible\", are certified Multi-Platinum (5× Platinum, 3× Platinum, and 2× Platinum respectively), while another two, \"Whispers in the Dark\" and \"Comatose\", are certified Platinum, and another four, \"Rebirthing\", \"Not Gonna Die\", \"The Last Night\", and \"The Resistance\" are certified Gold.');
+INSERT INTO `artists` (`id`, `name`, `picture`, `description`, `short_desc`) VALUES
+(1, '2Pac', 'https://cdn.britannica.com/02/162002-050-02512608/Tupac-Shakur-1993.jpg', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor. He is widely considered one of the most influential rappers of all time.Shakur is among the best-selling music artists, having sold more than 75 million records worldwide. Much of Shakur\'s music has been noted for addressing contemporary social issues that plagued inner cities, and he is considered a symbol of activism against inequality.', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor.'),
+(2, 'DaBaby', 'https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/1:1/w_800,h_800,c_limit/Dababy_BabyOnBaby.jpg', 'Jonathan Lyndale Kirk (born December 22, 1991), known professionally as DaBaby (formerly known as Baby Jesus), is an American rapper. After releasing several mixtapes between 2014 and 2018, he rose to mainstream prominence with his debut album Baby on Baby (2019), which included the Billboard Hot 100 top ten single \"Suge\".', 'Jonathan Lyndale Kirk (born December 22, 1991), known professionally as DaBaby (formerly known as Baby Jesus), is an American rapper.'),
+(3, 'Linkin Park', 'https://townsquare.media/site/366/files/2014/12/Linkin-Park.jpg?w=980&q=75', 'Linkin Park is an American rock band from Agoura Hills, California. The band\'s current lineup comprises vocalist/rhythm guitarist/keyboardist Mike Shinoda, lead guitarist Brad Delson, bassist Dave Farrell, DJ/turntablist Joe Hahn and drummer Rob Bourdon, all of whom are founding members. Vocalists Mark Wakefield and Chester Bennington are former members of the band. Categorized as alternative rock, Linkin Park\'s earlier music spanned a fusion of heavy metal and hip hop, while their later music features more electronica and pop elements.', 'Linkin Park is an American rock band from Agoura Hills, California.'),
+(4, 'Arctic Monkeys', 'https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f', 'Arctic Monkeys are an English rock band formed in Sheffield in 2002. The group consists of Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O\'Malley (bass guitar, backing vocals), and Matt Helders (drums, backing vocals). Former band member Andy Nicholson (bass guitar, backing vocals) left the band in 2006 shortly after their debut album was released.', 'Arctic Monkeys are an English rock band formed in Sheffield in 2002.'),
+(5, 'Skillet', 'https://www.skillet.com/sites/g/files/g2000015186/files/2022-09/Skillet_Site_NewSite_Assets_2560_PressShot3.jpg', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996. The band currently consists of husband John Cooper (lead vocals, bass) and wife Korey Cooper (rhythm guitar, keyboards, backing vocals) along with Jen Ledger (drums, vocals) and Seth Morrison (lead guitar). The band has released eleven albums, two of which, Collide and Comatose, received Grammy nominations. Two of their albums, Comatose and Awake, are certified Platinum and Double Platinum respectively by the RIAA, while Rise and Unleashed are certified Gold as of June 29, 2020. Four of their songs, \"Monster\", \"Hero\", \"Awake and Alive\", and \"Feel Invincible\", are certified Multi-Platinum (5× Platinum, 3× Platinum, and 2× Platinum respectively), while another two, \"Whispers in the Dark\" and \"Comatose\", are certified Platinum, and another four, \"Rebirthing\", \"Not Gonna Die\", \"The Last Night\", and \"The Resistance\" are certified Gold.', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996.');
 
 -- --------------------------------------------------------
 
@@ -100,7 +101,7 @@ INSERT INTO `tracks` (`id`, `name`, `time`, `link`, `album_id`) VALUES
 (3, 'Skandalouz (ft. Nate Dogg)', '4:08', 'https://open.spotify.com/embed/track/43P5sm3VJt3zLUhDk9kDDB', 1),
 (4, 'Got My Mind Made Up(ft. Dat Nigga Daz, Kurupt, Redman and Method Man)', '5:13', 'https://open.spotify.com/embed/track/5iTyKHHx9efbjrOXPP48gG', 1),
 (5, 'How Do U Want It (ft. K-Ci & JoJo)', '4:47', 'https://open.spotify.com/embed/track/5iTyKHHx9efbjrOXPP48gG', 1),
-(6, '2 of Amerikaz Most Wanted (ft. Snoop Dogg)', '4:07', 'https://open.spotify.com/embed/track/6LwrEZNkvFTOypNwSLjua', 1),
+(6, '2 of Amerikaz Most Wanted (ft. Snoop Dogg)', '4:07', 'https://open.spotify.com/embed/track/6LwrEZNkvFTOypNwSLjuaJ', 1),
 (7, 'No More Pain', '6:15', 'https://open.spotify.com/embed/track/7xeh81c3bxTgqUgy2WN56u', 1),
 (8, 'Heartz of Men', '4:44', 'https://open.spotify.com/embed/track/6VAdOq9sndm8QQqXx4BhkK', 1),
 (9, 'Life Goes On', '5:02', 'https://open.spotify.com/embed/track/1qZqFtSINOOmjYH1UE9805', 1),
