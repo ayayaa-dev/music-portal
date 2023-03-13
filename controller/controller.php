@@ -34,6 +34,7 @@ class Controller {
    // Single album info
    public static function AlbumInfoPage($id){
       $album = Model::getAlbumById($id);
+      $tracks = Model::getTracksByAlbum($id);
       include_once('view/albumInfo.php');
       return;
    }

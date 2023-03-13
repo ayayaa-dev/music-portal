@@ -63,6 +63,24 @@ h3 {
     text-align: center;
 }
 
+
+/*ALBUM INFO PAGE*/
+
+.Full_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Album_div {
+    width: 50%
+}
+
+.Track_list {
+    width: 50%;
+}
+
 footer {
     justify-content: center;
     text-align: center;
