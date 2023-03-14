@@ -72,6 +72,42 @@ td {
 }
 
 
+/* ARTIST LIST PAGE */
+
+.All_Artist {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Artist {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 20px;
+    margin-top: 0px;
+}
+
+.Artist_Image {
+    width: 350px;
+    height: 350px;
+}
+
+.Artist_Name {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.Artist_Naming {
+    font-size: 26px;
+}
+
+
 /*ALBUM INFO PAGE*/
 
 .Full_div {
