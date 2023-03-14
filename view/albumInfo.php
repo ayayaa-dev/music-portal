@@ -103,36 +103,40 @@ if (isset($album) && $album) {
 
     <div class="Tracks_list">
         <hr>
-        <div class="Tracks">
-            <p>Tracks</p>
+        <div class="Tracks_div">
+            <div class="Tracks">
+                <p>Tracks</p>
+            </div>
         </div>
-        <table style="width: 100%;">
-            <tr>
-                <th style="width:40%; text-align: center">
-                    <p>Track Name</p>
-                </th>
+        <div class="Table">
+            <table class="Table_tracks">
+                <tr>
+                    <th style="width:45%; text-align: center">
+                        <p>Track Name</p>
+                    </th>
 
-                <th style="width:25%; text-align: center">
-                    <p>Time</p>
-                </th>
+                    <th style="width:20%; text-align: center">
+                        <p>Time</p>
+                    </th>
 
-                <th style="width:35%; text-align: center; vertical-align:bottom;">
-                    <p>LINK</p>
-                </th>
+                    <th style="width:35%; text-align: center;">
+                        <p>LINK</p>
+                    </th>
 
-            </tr>
+                </tr>
 
-            <?php
-            foreach ($tracks as $track) {
-                echo '<tr>';
-                echo '<td> <p style= "text-align:center;">' . $track["name"] . '</p>  </td>';
-                echo '<td> <p style= "text-align:center;">' . $track["time"] . '</p> </td>';
-                echo '<td class="spotify"><iframe style="border-radius:12px;" src="' . $track['link'] . '" width="500px" height="100px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>';
-                echo '</tr>';
-            }
+                <?php
+                foreach ($tracks as $track) {
+                    echo '<tr>';
+                    echo '<td> <p style= "text-align:center;">' . $track["name"] . '</p>  </td>';
+                    echo '<td> <p style= "text-align:center;">' . $track["time"] . '</p> </td>';
+                    echo '<td class="spotify"><iframe style="border-radius:12px;" src="' . $track['link'] . '" width="500px" height="100px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>';
+                    echo '</tr>';
+                }
 
-            ?>
-        </table>
+                ?>
+            </table>
+        </div>
     </div>
 </body>
 

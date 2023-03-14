@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 13 2023 г., 14:14
+-- Время создания: Мар 14 2023 г., 19:34
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.6
 
@@ -41,14 +41,14 @@ CREATE TABLE `albums` (
 --
 
 INSERT INTO `albums` (`id`, `name`, `picture`, `release_date`, `genre`, `artist_id`) VALUES
-(1, 'All Eyez On Me', 'https://upload.wikimedia.org/wikipedia/en/1/16/Alleyezonme.jpg', '1996-02-13', 'West Coast Hip-Hop, Gangsta Rap, G-Funk', 1),
-(2, 'Me Against The World', 'https://upload.wikimedia.org/wikipedia/en/3/3d/Meagainsttheworldcover.jpg', '1995-03-14', 'Hip-Hop, Consious Rap, G-Funk', 1),
+(1, 'All Eyez On Me', 'https://upload.wikimedia.org/wikipedia/en/1/16/Alleyezonme.jpg', '1996-02-13', 'Gangsta Rap, G-Funk', 1),
+(2, 'Me Against The World', 'https://upload.wikimedia.org/wikipedia/en/3/3d/Meagainsttheworldcover.jpg', '1995-03-14', 'Hip-Hop, G-Funk', 1),
 (3, 'BLAME IT ON BABY', 'https://upload.wikimedia.org/wikipedia/en/c/c2/DaBaby_-_Blame_It_on_Baby.png', '2020-04-17', 'Hip-Hop, Trap', 2),
 (4, 'Baby On Baby 2', 'https://upload.wikimedia.org/wikipedia/en/c/ca/DaBaby_-_Baby_on_Baby_2.png', '2022-09-23', 'Hip-Hop, Trap', 2),
-(5, 'Meteora', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg', '2003-03-25', 'Nu Metal, Rap Metal, Alternative Metal, Rap Rock, Alternative Rock', 3),
-(6, 'One More Light', 'https://upload.wikimedia.org/wikipedia/en/b/b2/Linkin_Park%2C_One_More_Light%2C_album_art_final.jpeg', '2017-05-19', 'Pop, Pop Rock, ElectroPop, Electronic Rock', 3),
+(5, 'Meteora', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg', '2003-03-25', 'Alternative Metal, Rap Rock', 3),
+(6, 'One More Light', 'https://upload.wikimedia.org/wikipedia/en/b/b2/Linkin_Park%2C_One_More_Light%2C_album_art_final.jpeg', '2017-05-19', 'Pop Rock, Electronic Rock', 3),
 (7, 'AM', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/%22AM%22_%28Arctic_Monkeys%29.jpg/330px-%22AM%22_%28Arctic_Monkeys%29.jpg', '2013-09-09', 'Indie Rock', 4),
-(8, 'Favorite Worst Nightmare', 'https://upload.wikimedia.org/wikipedia/en/a/ae/Favourite_Worst_Nightmare.jpg', '2007-04-23', 'Post-Punk Revival, Indie Rock, Garage Rock, Post-BrtiPop', 4),
+(8, 'Favorite Worst Nightmare', 'https://upload.wikimedia.org/wikipedia/en/a/ae/Favourite_Worst_Nightmare.jpg', '2007-04-23', 'Post-Punk Revival, Indie Rock', 4),
 (9, 'Unleashed', 'https://upload.wikimedia.org/wikipedia/en/8/8c/SkilletUnleasedCover.jpg', '2016-08-05', 'Christian Rock, Symphonic Rock', 5),
 (10, 'Comatose', 'https://upload.wikimedia.org/wikipedia/en/e/ea/Skilletcomatose.jpg', '2006-10-03', 'Christian Rock, Christian Metal', 5);
 
