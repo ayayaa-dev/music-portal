@@ -19,7 +19,7 @@ if (isset($album) && $album) {
 
                 <div class="Album_Info">
 
-                    <div class="Album_Name">
+                    <!-- <div class="Album_Name">
                         <div class="name_album">
                             <h2>Album Name</h2>
                         </div>
@@ -30,7 +30,7 @@ if (isset($album) && $album) {
                             ?>
                         </div>
 
-                    </div>
+                    </div> -->
 
                     <div class="Album_Release">
                         <div class="release">
@@ -128,7 +128,7 @@ if (isset($album) && $album) {
                 <?php
                 foreach ($tracks as $track) {
                     echo '<tr>';
-                    echo '<td> <p style= "text-align:center;">' . $track["name"] . '</p>  </td>';
+                    echo '<td> <p style= "text-align:center; padding:10px;">' . $track["name"] . '</p>  </td>';
                     echo '<td> <p style= "text-align:center;">' . $track["time"] . '</p> </td>';
                     echo '<td class="spotify"><iframe style="border-radius:12px;" src="' . $track['link'] . '" width="500px" height="100px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>';
                     echo '</tr>';

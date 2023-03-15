@@ -47,7 +47,7 @@ $title = "Albums"
         echo '<div>';
         echo '<div>';
         echo '<a href="album?' . $album['id'] . '" style="font-size: 18px;text-decoration: none; color: black;">';
-        echo '<button>More Info</button></a>';
+        echo '<button class="Buton">More Info</button></a>';
         echo '</div>';
         echo '</div>';
 

@@ -72,7 +72,7 @@ class Model {
     }
     // GET artist by id
     public static function getArtistById($id) {
-        $sql = "SELECT * FROM `artists` WHERE `ID`='".$id."'";
+        $sql = "SELECT * FROM `artists` WHERE `ID`='" . $id . "'";
         $db = new database();
         $item = $db -> getOne($sql);
         return $item;
@@ -85,6 +85,13 @@ class Model {
         return $item;
     }
     public static function getMusicPlayer(){
+        $query  = "SELECT * FROM `tracks` ORDER BY RAND() LIMIT 1";
+        $db = new database();
+        $item = $db->getOne($query);
+        return $item;
+    }
+    public static function getMusicPlayer2()
+    {
         $query  = "SELECT * FROM `tracks` ORDER BY RAND() LIMIT 1";
         $db = new database();
         $item = $db->getOne($query);

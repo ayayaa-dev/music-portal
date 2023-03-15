@@ -5,6 +5,7 @@ class Controller {
       $albumList = Model::getTopAlbums();
       $artistList = Model::getTopArtistList();
       $musicPlayer = Model::getMusicPlayer();
+      $musicPlayer2 = Model::getMusicPlayer2();
       include_once('view/homepage.php');
       return;
    }
@@ -17,6 +18,7 @@ class Controller {
    // Single artist info
    public static function ArtistInfoPage($id){
       $artist = Model::getArtistById($id);
+      $album = Model::getAlbumListByArtist($id);
       include_once('view/artistInfo.php');
       return;
    }
