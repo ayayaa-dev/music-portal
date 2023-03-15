@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Мар 14 2023 г., 19:34
--- Версия сервера: 10.4.24-MariaDB
--- Версия PHP: 8.1.6
+-- Время создания: Мар 15 2023 г., 10:13
+-- Версия сервера: 10.4.27-MariaDB
+-- Версия PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,21 +34,21 @@ CREATE TABLE `albums` (
   `release_date` date NOT NULL,
   `genre` text NOT NULL,
   `artist_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `albums`
 --
 
 INSERT INTO `albums` (`id`, `name`, `picture`, `release_date`, `genre`, `artist_id`) VALUES
-(1, 'All Eyez On Me', 'https://upload.wikimedia.org/wikipedia/en/1/16/Alleyezonme.jpg', '1996-02-13', 'Gangsta Rap, G-Funk', 1),
+(1, 'All Eyez On Me', 'https://upload.wikimedia.org/wikipedia/en/1/16/Alleyezonme.jpg', '1996-02-13', 'Hip-Hop, Gangsta Rap', 1),
 (2, 'Me Against The World', 'https://upload.wikimedia.org/wikipedia/en/3/3d/Meagainsttheworldcover.jpg', '1995-03-14', 'Hip-Hop, G-Funk', 1),
 (3, 'BLAME IT ON BABY', 'https://upload.wikimedia.org/wikipedia/en/c/c2/DaBaby_-_Blame_It_on_Baby.png', '2020-04-17', 'Hip-Hop, Trap', 2),
 (4, 'Baby On Baby 2', 'https://upload.wikimedia.org/wikipedia/en/c/ca/DaBaby_-_Baby_on_Baby_2.png', '2022-09-23', 'Hip-Hop, Trap', 2),
-(5, 'Meteora', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg', '2003-03-25', 'Alternative Metal, Rap Rock', 3),
+(5, 'Meteora', 'https://upload.wikimedia.org/wikipedia/en/0/0c/Linkin_Park_Meteora_Album_Cover.jpg', '2003-03-25', 'Rap Rock, Alternative Rock', 3),
 (6, 'One More Light', 'https://upload.wikimedia.org/wikipedia/en/b/b2/Linkin_Park%2C_One_More_Light%2C_album_art_final.jpeg', '2017-05-19', 'Pop Rock, Electronic Rock', 3),
 (7, 'AM', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/%22AM%22_%28Arctic_Monkeys%29.jpg/330px-%22AM%22_%28Arctic_Monkeys%29.jpg', '2013-09-09', 'Indie Rock', 4),
-(8, 'Favorite Worst Nightmare', 'https://upload.wikimedia.org/wikipedia/en/a/ae/Favourite_Worst_Nightmare.jpg', '2007-04-23', 'Post-Punk Revival, Indie Rock', 4),
+(8, 'Favorite Worst Nightmare', 'https://upload.wikimedia.org/wikipedia/en/a/ae/Favourite_Worst_Nightmare.jpg', '2007-04-23', 'Indie Rock, Garage Rock', 4),
 (9, 'Unleashed', 'https://upload.wikimedia.org/wikipedia/en/8/8c/SkilletUnleasedCover.jpg', '2016-08-05', 'Christian Rock, Symphonic Rock', 5),
 (10, 'Comatose', 'https://upload.wikimedia.org/wikipedia/en/e/ea/Skilletcomatose.jpg', '2006-10-03', 'Christian Rock, Christian Metal', 5);
 
@@ -64,18 +64,18 @@ CREATE TABLE `artists` (
   `picture` text NOT NULL,
   `description` text NOT NULL,
   `short_desc` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `artists`
 --
 
 INSERT INTO `artists` (`id`, `name`, `picture`, `description`, `short_desc`) VALUES
-(1, '2Pac', 'https://cdn.britannica.com/02/162002-050-02512608/Tupac-Shakur-1993.jpg', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor. He is widely considered one of the most influential rappers of all time.Shakur is among the best-selling music artists, having sold more than 75 million records worldwide. Much of Shakur\'s music has been noted for addressing contemporary social issues that plagued inner cities, and he is considered a symbol of activism against inequality.', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor.'),
+(1, '2Pac', 'https://hips.hearstapps.com/hmg-prod/images/tupac_shakur_photo_by_steve_eichner_archive_photos_getty_83928439.jpg', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor. He is widely considered one of the most influential rappers of all time. Shakur is among the best-selling music artists, having sold more than 75 million records worldwide. Much of Shakur\'s music has been noted for addressing contemporary social issues that plagued inner cities, and he is considered a symbol of activism against inequality.', 'Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor.'),
 (2, 'DaBaby', 'https://media.pitchfork.com/photos/5c7d4c1b4101df3df85c41e5/1:1/w_800,h_800,c_limit/Dababy_BabyOnBaby.jpg', 'Jonathan Lyndale Kirk (born December 22, 1991), known professionally as DaBaby (formerly known as Baby Jesus), is an American rapper. After releasing several mixtapes between 2014 and 2018, he rose to mainstream prominence with his debut album Baby on Baby (2019), which included the Billboard Hot 100 top ten single \"Suge\".', 'Jonathan Lyndale Kirk (born December 22, 1991), known professionally as DaBaby (formerly known as Baby Jesus), is an American rapper.'),
-(3, 'Linkin Park', 'https://townsquare.media/site/366/files/2014/12/Linkin-Park.jpg?w=980&q=75', 'Linkin Park is an American rock band from Agoura Hills, California. The band\'s current lineup comprises vocalist/rhythm guitarist/keyboardist Mike Shinoda, lead guitarist Brad Delson, bassist Dave Farrell, DJ/turntablist Joe Hahn and drummer Rob Bourdon, all of whom are founding members. Vocalists Mark Wakefield and Chester Bennington are former members of the band. Categorized as alternative rock, Linkin Park\'s earlier music spanned a fusion of heavy metal and hip hop, while their later music features more electronica and pop elements.', 'Linkin Park is an American rock band from Agoura Hills, California.'),
+(3, 'Linkin Park', 'https://resources.tidal.com/images/90e334cd/3d8b/4db4/9a62/785aabd714a7/750x750.jpg', 'Linkin Park is an American rock band from Agoura Hills, California. The band\'s current lineup comprises vocalist/rhythm guitarist/keyboardist Mike Shinoda, lead guitarist Brad Delson, bassist Dave Farrell, DJ/turntablist Joe Hahn and drummer Rob Bourdon, all of whom are founding members. Vocalists Mark Wakefield and Chester Bennington are former members of the band. Categorized as alternative rock, Linkin Park\'s earlier music spanned a fusion of heavy metal and hip hop, while their later music features more electronica and pop elements.', 'Linkin Park is an American rock band from Agoura Hills, California.'),
 (4, 'Arctic Monkeys', 'https://i.scdn.co/image/ab6761610000e5eb7da39dea0a72f581535fb11f', 'Arctic Monkeys are an English rock band formed in Sheffield in 2002. The group consists of Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O\'Malley (bass guitar, backing vocals), and Matt Helders (drums, backing vocals). Former band member Andy Nicholson (bass guitar, backing vocals) left the band in 2006 shortly after their debut album was released.', 'Arctic Monkeys are an English rock band formed in Sheffield in 2002.'),
-(5, 'Skillet', 'https://www.skillet.com/sites/g/files/g2000015186/files/2022-09/Skillet_Site_NewSite_Assets_2560_PressShot3.jpg', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996. The band currently consists of husband John Cooper (lead vocals, bass) and wife Korey Cooper (rhythm guitar, keyboards, backing vocals) along with Jen Ledger (drums, vocals) and Seth Morrison (lead guitar). The band has released eleven albums, two of which, Collide and Comatose, received Grammy nominations. Two of their albums, Comatose and Awake, are certified Platinum and Double Platinum respectively by the RIAA, while Rise and Unleashed are certified Gold as of June 29, 2020. Four of their songs, \"Monster\", \"Hero\", \"Awake and Alive\", and \"Feel Invincible\", are certified Multi-Platinum (5× Platinum, 3× Platinum, and 2× Platinum respectively), while another two, \"Whispers in the Dark\" and \"Comatose\", are certified Platinum, and another four, \"Rebirthing\", \"Not Gonna Die\", \"The Last Night\", and \"The Resistance\" are certified Gold.', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996.');
+(5, 'Skillet', 'https://yt3.googleusercontent.com/ZT7aILxbSXcUrFAFq-ZzmfX2BSQ0Ft2UditasAE2F0w59LABb1BCC2x5NZegTv2y3PXitfVntw=s900-c-k-c0x00ffffff-no-rj', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996. The band currently consists of husband John Cooper (lead vocals, bass) and wife Korey Cooper (rhythm guitar, keyboards, backing vocals) along with Jen Ledger (drums, vocals) and Seth Morrison (lead guitar). The band has released eleven albums, two of which, Collide and Comatose, received Grammy nominations. Two of their albums, Comatose and Awake, are certified Platinum and Double Platinum respectively by the RIAA, while Rise and Unleashed are certified Gold as of June 29, 2020.', 'Skillet is an American Christian rock band formed in Memphis, Tennessee, in 1996.');
 
 -- --------------------------------------------------------
 
@@ -89,7 +89,7 @@ CREATE TABLE `tracks` (
   `time` varchar(5) NOT NULL,
   `link` text NOT NULL,
   `album_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `tracks`
@@ -246,17 +246,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `usename` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
   `role` enum('admin','user') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `usename`, `role`) VALUES
-(1, 'admin@test.com', 'admin123', 'admin', 'admin'),
-(2, 'user@test.com', 'user123', 'user', 'user');
+INSERT INTO `users` (`id`, `email`, `password`, `username`, `role`) VALUES
+(1, 'admin@test.com', '$2y$10$QG4ZhUkngdvjLocu1TgorOT3ndnqzgGHBdM8ADJWzbWHr4YnIWlGi', 'admin', 'admin'),
+(2, 'user@test.com', '$2y$10$uPwSKd4hpr20myDU7L44Xuj6b8Um6HeP6KSFZNIxfIvku4MG7VO2q', 'user', 'user');
 
 --
 -- Индексы сохранённых таблиц

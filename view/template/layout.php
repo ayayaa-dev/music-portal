@@ -31,12 +31,12 @@
 							if(!isset($_SESSION['sessionId'])){
 								echo '<li class="nav-item"><a class="nav-link" href="login">Log in</a></li>';
 							} else {
-								echo '<li class="nav-item"><a class="nav-link" href="logout">'.$_SESSION['name'].' - Log out</a></li>';
-								echo '<li class="nav-item"><a href="profile">- Profile</a></li>';
+								echo '<li class="nav-item"><a href="profile">Profile</a></li>';
+								echo '<li class="nav-item"><a class="nav-link" href="logout">Log out</a></li>';
 							}
 							if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
-								echo '<li class="nav-item"><a class="nav-link" href="countryList">Manage Artists</a></li>';
-								echo '<li class="nav-item"><a class="nav-link" href="cityList">Manage Albums</a></li>';
+								echo '<li class="nav-item"><a class="nav-link" href="artistsList">Manage Artists</a></li>';
+								echo '<li class="nav-item"><a class="nav-link" href="albumsList">Manage Albums</a></li>';
 							}
 						?>
 						</ul>

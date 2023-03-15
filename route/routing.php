@@ -19,10 +19,13 @@ if(strstr($_SERVER['REQUEST_URI'],'?')){//если найден символ '?'
 // homepage
 if ($route == '' OR $route == 'index.php'){
 	Controller::StartSite();
-} elseif ($route == 'artists'){
+}
+// list of albums/artists
+elseif ($route == 'artists'){
 	Controller::ArtistsPage();
 } elseif ( $route == 'artist'){
 	if(isset($id)){
+		// Artist info
 		Controller::ArtistInfoPage($id);
 	} else {
 		Controller::error404();	
@@ -31,11 +34,29 @@ if ($route == '' OR $route == 'index.php'){
 	Controller::AlbumsPage();
 } elseif ( $route == 'album'){
 	if(isset($id)){
+		// Album info
 		Controller::AlbumInfoPage($id);
 	} else {
 		Controller::error404();	
 	}
 }
+// search
+// elseif ($route == 'search'){
+// 	if(isset($_GET['text'])) {
+// 		Controller::SearchByAlbum($_GET['text']);
+// 	} else {
+// 		Controller::error404();	
+// 	}
+// }
+// user Login / Logout
+elseif ($route == 'login'){
+	AdminController::LoginForm();
+} elseif ($route == 'loginResult'){
+	AdminController::LoginAction(); 
+} elseif ($route == 'logout'){
+	AdminController::LogoutAction();
+}
+// error 404 page
 else {
 	Controller::error404();
 } 

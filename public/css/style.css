@@ -6,13 +6,24 @@ body {
     width: 100%;
 }
 
+.form-inline input {
+    margin-top: 0px;
+}
+
+.form-inline button {
+    padding: 4px 6px;
+    vertical-align: top;
+}
+
 ul li a {
     color: black !important;
+    text-decoration: none;
 }
 
 h3 {
     margin: 20px;
 }
+
 
 .album {
     display: flex;

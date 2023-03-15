@@ -13,7 +13,7 @@ class AdminController{
     }
     public static function LogoutAction(){
         $result = AdminModel::userLogout();
-        include_once('view/loginForm.php');
+        include_once('view/homepage.php');
     }
     public static function ProfileForm(){
         include_once('view/profileTable.php');
