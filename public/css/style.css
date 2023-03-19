@@ -24,7 +24,6 @@ h3 {
     margin: 20px;
 }
 
-
 .album {
     display: flex;
     flex-direction: row;
@@ -409,7 +408,58 @@ h3 {
 td,
 th {
     border: 1px solid black;
-    border-radius: px;
+    border-radius: 10px;
+}
+
+
+/* MANAGE PAGES */
+
+.Add_Artist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+
+.Blue_button {
+    background-color: blue;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.Button_Block {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Green_button {
+    margin-right: 80px;
+    width: 30%;
+}
+
+.Edit_Button {
+    background-color: green;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px
+}
+
+.Red_button {
+    width: 30%;
+}
+
+.Delete_Button {
+    width: 100%;
+    background-color: red;
+    border-radius: 10px;
+    font-size: 20px
 }
 
 footer {
