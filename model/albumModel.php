@@ -45,7 +45,9 @@ class AlbumModel {
         $result = false;
         if(isset($_POST['send'])){
             $sql = "DELETE FROM `albums` WHERE `albums`.`id` = '".$id."'";
+            $sql2 = "DELETE FROM `tracks` WHERE `tracks`.`album_id` = '" . $id . "'";
             $database = new database();
+            $item = $database->executeRun($sql2);
             $item = $database -> executeRun($sql);
             if($item==true) $result = true;
         }
