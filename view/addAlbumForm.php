@@ -46,7 +46,7 @@ $title="Add album";
         <div class="col-md-12">
             <div class="form-group">
                 <label for="addAlbum">Release date:</label>
-                <input type="text" name="name" class="form-control" required>
+                <input type="text" name="date" class="form-control" required>
             </div>
         </div>
         <div class="col-md-12 text-center">
