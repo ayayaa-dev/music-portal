@@ -4,14 +4,12 @@ $title = "Artists";
 ?>
 
 
-<div style="text-align: center;">
-    <h3>List of all artists</h3>
-</div>
 <div class="Add_Artist">
     <a href="artistAdd" style="text-decoration: none; color: white;">
         <button class="Blue_button">Add Artist</button>
     </a>
 </div>
+
 <div style="display:flex;flex-direction:row;flex-wrap:wrap;width: 100%; justify-content: center;">
     <div class="All_Artist">
         <?php

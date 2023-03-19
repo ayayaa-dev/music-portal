@@ -439,6 +439,15 @@ th {
     justify-content: center;
 }
 
+.Button_Block2 {
+    /* border: 1px solid black; */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .Green_button {
     margin-right: 80px;
     width: 30%;

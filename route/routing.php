@@ -59,6 +59,8 @@ elseif ($route == 'login') {
 	AdminController::ProfileForm();
 } elseif ($route == 'artistsList') {
 	AdminController::ArtistManage();
+} elseif ($route == 'albumsList') {
+	AdminController::AlbumManage();
 }
 // error 404 page
 else {

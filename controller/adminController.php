@@ -34,4 +34,11 @@ class AdminController
         $artistList = Model::getArtistList();
         include_once('view/artistManage.php');
     }
+
+    public static function AlbumManage()
+    {
+        $albumList = Model::getAlbums();
+        include_once('view/albumManage.php');
+        return;
+    }
 }
