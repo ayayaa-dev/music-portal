@@ -1,8 +1,6 @@
 <?php
-class AdminController
-{
-    public static function LoginForm()
-    {
+class AdminController {
+    public static function LoginForm(){
         include_once('view/loginForm.php');
     }
     public static function LoginAction()
@@ -31,7 +29,7 @@ class AdminController
 
     public static function ArtistManage()
     {
-        $artistList = Model::getArtistList();
+        $artistList = Model::getArtists();
         include_once('view/artistManage.php');
     }
 

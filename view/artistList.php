@@ -5,6 +5,13 @@ $title = "Artists"
 <div style="text-align: center;">
     <h3>List of all artists</h3>
 </div>
+<?php
+    if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
+        echo '<div style="text-align: right; margin: 10px;">';
+        echo '<a href="addArtist" class="btn btn-primary btn-sm btn-flat">Add Artist</a>';
+        echo '</div>';
+    }
+?>
 <div style="display:flex;flex-direction:row;flex-wrap:wrap;width: 100%; justify-content: center;">
     <div class="All_Artist">
         <?php

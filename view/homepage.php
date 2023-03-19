@@ -1,11 +1,6 @@
 <?php
 ob_start();
 $title = "WELCOME";
-// $title = "#速度与激情9#
-//     早上好中国
-//     现在我有冰激淋 我很喜欢冰激淋
-//     但是《速度与激情9》比冰激淋……";
-// 
 ?>
 <div class="col-md-6" style="height: 91.7%; display: flex; flex-direction: column; justify-content: space-between;">
     <div>
@@ -55,7 +50,6 @@ $title = "WELCOME";
         <tr>
             <th style="width: 18%"></th>
             <th style="width: 82%"></th>
-            <!-- <th style="width: 20%"></th> -->
         </tr>
         <tbody>
             <?php
@@ -73,7 +67,6 @@ $title = "WELCOME";
         <tr>
             <th style="width: 18%"></th>
             <th style="width: 82%"></th>
-            <!-- <th style="width: 20%"></th> -->
         </tr>
         <tbody style="justify-content:center; margin: 0 auto;">
             <?php

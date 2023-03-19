@@ -5,10 +5,16 @@ if (isset($album) && $album) {
     $title .= $album['name'];
 }
 ?>
-
 <body>
+    <?php
+        if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
+            echo '<div style="text-align: right; margin:10px;">';
+            echo '<a href="editAlbum?'.$album['id'].'" class="btn btn-primary btn-sm btn-flat" style="margin:2px;">Edit Album</a>';
+            echo '<a href="deleteAlbum?'.$album['id'].'" class="btn btn-danger btn-sm btn-flat" style="margin:2px;">Delete Album</a>';
+            echo '</div>';
+        }
+    ?>
     <div class="Full_div">
-
         <div class="Album_div">
             <div class="border_album">
                 <div class="Album_Picture">
@@ -98,9 +104,7 @@ if (isset($album) && $album) {
                 </div>
             </div>
         </div>
-
     </div>
-
     <div class="Tracks_list">
         <hr>
         <div class="Tracks_div">
@@ -111,7 +115,7 @@ if (isset($album) && $album) {
         <div class="Table">
             <table class="Table_tracks">
                 <tr>
-                    <th style="width:45%; text-align: center">
+                    <th style="width:45%; text-align: center;">
                         <p>Track Name</p>
                     </th>
 
@@ -120,7 +124,7 @@ if (isset($album) && $album) {
                     </th>
 
                     <th style="width:35%; text-align: center;">
-                        <p>LINK</p>
+                        <p>Preview</p>
                     </th>
 
                 </tr>

@@ -34,10 +34,10 @@
 								echo '<li class="nav-item"><a href="profile">Profile</a></li>';
 								echo '<li class="nav-item"><a class="nav-link" href="logout">Log out</a></li>';
 							}
-							if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
-								echo '<li class="nav-item"><a class="nav-link" href="artistsList">Manage Artists</a></li>';
-								echo '<li class="nav-item"><a class="nav-link" href="albumsList">Manage Albums</a></li>';
-							}
+							// if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
+							// 	echo '<li class="nav-item"><a class="nav-link" href="artistsList">Manage Artists</a></li>';
+							// 	echo '<li class="nav-item"><a class="nav-link" href="albumsList">Manage Albums</a></li>';
+							// }
 						?>
 						</ul>
 					</div>

@@ -4,7 +4,7 @@
  */
 class Model {
     // список артистов
-    public static function getArtistList(){
+    public static function getArtists(){
         $sql = "SELECT * FROM `artists` ORDER BY `artists`.`name` ASC;";//Список
         $db = new database();
         $item = $db->getAll($sql);

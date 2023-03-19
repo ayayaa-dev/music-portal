@@ -48,19 +48,100 @@ elseif ($route == 'artists') {
 // 		Controller::error404();	
 // 	}
 // }
-// user Login / Logout
-elseif ($route == 'login') {
+
+// user Login
+elseif ($route == 'login'){
 	AdminController::LoginForm();
-} elseif ($route == 'loginResult') {
-	AdminController::LoginAction();
-} elseif ($route == 'logout') {
-	AdminController::LogoutAction();
-} elseif ($route == 'profile') {
-	AdminController::ProfileForm();
-} elseif ($route == 'artistsList') {
-	AdminController::ArtistManage();
-} elseif ($route == 'albumsList') {
-	AdminController::AlbumManage();
+} elseif ($route == 'loginResult'){
+	AdminController::LoginAction(); 
+} elseif(isset($_SESSION['role'])){
+	// user Profile page
+	if($route == 'profile'){
+		AdminController::ProfileForm();
+	} elseif ($route == 'editProfileResult'){
+		AdminController::editProfileResult();
+	} 
+	// user Logout
+	elseif ($route == 'logout'){
+		AdminController::LogoutAction();
+	}
+	if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){
+		// Albums CRUD
+		// Add New Album
+		if($route == 'addAlbum'){
+			AlbumController::AddAlbum();
+		}
+		elseif ($route == 'addAlbumResult'){
+			AlbumController::addAlbumResult();
+		}
+		// Edit Existing Album
+		elseif($route == 'editAlbum'){
+			if(isset($id)){
+				AlbumController::EditAlbum($id);
+			} else {
+				Controller::error404();	
+			}
+		} elseif ($route == 'editAlbumResult'){
+			if(isset($id)){
+				AlbumController::editAlbumResult($id);
+			} else {
+				Controller::error404();
+			}
+		}
+		// Delete Existing Album
+		elseif ($route == 'deleteAlbum'){
+			if(isset($id)){
+				AlbumController::DeleteAlbum($id);
+			} else {
+				Controller::error404();
+			}
+		}
+		elseif ($route == 'deleteAlbumResult'){
+			if(isset($id)){
+				AlbumController::deleteAlbumResult($id);
+			} else {
+				Controller::error404();
+			}
+		}
+
+		// Artists CRUD
+		// Add New Artist
+		elseif($route == 'addArtist'){
+			ArtistController::AddArtist();
+		}
+		elseif ($route == 'addArtistResult'){
+			ArtistController::addArtistResult();
+		}
+		// Edit Existing Artist
+		elseif($route == 'editArtist'){
+			if(isset($id)){
+				ArtistController::EditArtist($id);
+			} else {
+				Controller::error404();	
+			}			
+		} elseif ($route == 'editArtistResult'){
+			if(isset($id)){
+				ArtistController::editArtistResult($id);
+			} else {
+				Controller::error404();
+			}
+		}
+		// Delete Existing Artist
+		elseif ($route == 'deleteArtist'){
+			if(isset($id)){
+				ArtistController::DeleteArtist($id);
+			} else {
+				Controller::error404();
+			}
+		}
+		elseif ($route == 'deleteArtistResult'){
+			if(isset($id)){
+				ArtistController::deleteArtistResult($id);
+			} else {
+				Controller::error404();
+			}
+		}
+	}
 }
 // error 404 page
 else {

@@ -7,6 +7,14 @@ if (isset($artist) && $artist) {
 ?>
 
 <body>
+    <?php
+        if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
+            echo '<div style="text-align: right; margin:10px;">';
+            echo '<a href="editArtist?'.$artist['id'].'" class="btn btn-primary btn-sm btn-flat" style="margin:2px;">Edit Artist</a>';
+            echo '<a href="deleteArtist?'.$artist['id'].'" class="btn btn-danger btn-sm btn-flat" style="margin:2px;">Delete Artist</a>';
+            echo '</div>';
+        }
+    ?>
     <div class="Full_Div">
         <div class="Artist_INFO">
             <div class="Artist_IMAGE">
@@ -73,7 +81,7 @@ if (isset($artist) && $artist) {
                 echo '<div>';
                 echo '<div>';
                 echo '<a href="album?' . $album['id'] . '" style="font-size: 18px;text-decoration: none; color: black;">';
-                echo '<button class="Buton">More Info</button></a>';
+                echo '<button class="button">More Info</button></a>';
                 echo '</div>';
                 echo '</div>';
 

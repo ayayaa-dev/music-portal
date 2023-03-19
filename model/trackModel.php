@@ -1,5 +1,5 @@
 <?php
-class ModelTracks {
+class TrackModel {
 
     public static function getTracks($id){
         $sql = "SELECT * FROM `Tracks` WHERE `id`='".$id."'";

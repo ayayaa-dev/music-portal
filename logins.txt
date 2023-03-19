@@ -1,0 +1,6 @@
+user:
+    email - user@test.com
+    pass - user123
+admin:
+    email - admin@test.com
+    pass - admin123

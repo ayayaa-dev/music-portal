@@ -11,8 +11,8 @@ class Controller {
    }
    // Artist List
    public static function ArtistsPage(){
-      $artistList = Model::getArtistList();
-      include_once('view/artistsList.php');
+      $artistList = Model::getArtists();
+      include_once('view/artistList.php');
       return;
    }
    // Single artist info
@@ -25,12 +25,12 @@ class Controller {
    // Album List
    public static function AlbumsPage(){
       $albumList = Model::getAlbums();
-      include_once('view/albumsList.php');
+      include_once('view/albumList.php');
       return;
    }
    public static function AlbumSongs($album_id){
       $trackList = Model::get3TrackByAlbum($album_id);
-      include_once('view/albumsList.php');
+      include_once('view/albumList.php');
       return;
    }
    // Single album info
