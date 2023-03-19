@@ -141,6 +141,42 @@ elseif ($route == 'login'){
 				Controller::error404();
 			}
 		}
+
+		//Tracks CRUD
+		//New Track
+		elseif ($route == 'addTrack') {
+			TrackController::addTrack();
+		} elseif ($route == 'addTrackResult') {
+			TrackController::addTrackResult();
+		}
+		// Edit Existing Track
+		elseif ($route == 'editTrack') {
+			if (isset($id)) {
+				TrackController::EditTrack($id);
+			} else {
+				Controller::error404();
+			}
+		} elseif ($route == 'editTrackResult') {
+			if (isset($id)) {
+				TrackController::editTrackResult($id);
+			} else {
+				Controller::error404();
+			}
+		}
+		// Delete Existing Track
+		elseif ($route == 'deleteTrack') {
+			if (isset($id)) {
+				TrackController::DeleteTrack($id);
+			} else {
+				Controller::error404();
+			}
+		} elseif ($route == 'deleteTrackResult') {
+			if (isset($id)) {
+				TrackController::deleteTrackResult($id);
+			} else {
+				Controller::error404();
+			}
+		}
 	}
 }
 // error 404 page

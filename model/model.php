@@ -46,7 +46,15 @@ class Model {
         $db = new database();
         $item = $db->getAll($sql);
         return $item;
-    }   
+    }
+    // Список треков
+    public static function getTracks()
+    {
+        $sql = "SELECT * FROM  `tracks` ORDER BY `tracks`.`name`";
+        $db = new database();
+        $item = $db->getAll($sql);
+        return $item;
+    }
     //Страница список треков по альбому
     public static function getTracksByAlbum($album_id) {
         $sql = "SELECT * FROM `tracks` WHERE `album_id` = '".$album_id."' ORDER BY `tracks`.`id` ASC"; //Список
@@ -82,6 +90,15 @@ class Model {
         $sql = "SELECT * FROM `albums` WHERE `ID`='".$id."'";
         $db = new database();
         $item = $db -> getOne($sql);
+        return $item;
+    }
+
+    //GET track by id
+    public static function getTrackById($id)
+    {
+        $sql = "SELECT * FROM `tracks` WHERE `ID`='" . $id . "'";
+        $db = new database();
+        $item = $db->getOne($sql);
         return $item;
     }
     public static function getMusicPlayer(){
