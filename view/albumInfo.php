@@ -5,14 +5,15 @@ if (isset($album) && $album) {
     $title .= $album['name'];
 }
 ?>
+
 <body>
     <?php
-        if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
-            echo '<div style="text-align: right; margin:10px;">';
-            echo '<a href="editAlbum?'.$album['id'].'" class="btn btn-primary btn-sm btn-flat" style="margin:2px;">Edit Album</a>';
-            echo '<a href="deleteAlbum?'.$album['id'].'" class="btn btn-danger btn-sm btn-flat" style="margin:2px;">Delete Album</a>';
-            echo '</div>';
-        }
+    if (isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin') {
+        echo '<div style="text-align: right; margin:10px;">';
+        echo '<a href="editAlbum?' . $album['id'] . '" class="btn btn-primary btn-sm btn-flat" style="margin:2px;">Edit Album</a>';
+        echo '<a href="deleteAlbum?' . $album['id'] . '" class="btn btn-danger btn-sm btn-flat" style="margin:2px;">Delete Album</a>';
+        echo '</div>';
+    }
     ?>
     <div class="Full_div">
         <div class="Album_div">
@@ -112,6 +113,13 @@ if (isset($album) && $album) {
                 <p>Tracks</p>
             </div>
         </div>
+        <?php
+        if (isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin') {
+            echo '<div style=" width: 100%; height: 50px; display:flex; justify-content: center; margin-bottom: 10px;">';
+            echo '<a href="addTrack" class="btn btn-primary btn-sm btn-flat" style="margin:2px; width: 25%; height: 100%;display: inline-flex;align-items: center; justify-content: center; font-size:24px;">Add Track</a>';
+        }
+        echo '</div>';
+        ?>
         <div class="Table">
             <table class="Table_tracks">
                 <tr>
@@ -127,6 +135,13 @@ if (isset($album) && $album) {
                         <p>Preview</p>
                     </th>
 
+                    <?php
+                    if (isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin') {
+                        echo '<th>';
+                        echo '<p>Admin Panel</p>';
+                    }
+                    ?>
+
                 </tr>
 
                 <?php
@@ -135,6 +150,12 @@ if (isset($album) && $album) {
                     echo '<td> <p style= "text-align:center; padding:10px;">' . $track["name"] . '</p>  </td>';
                     echo '<td> <p style= "text-align:center;">' . $track["time"] . '</p> </td>';
                     echo '<td cla ss="spotify"><iframe style="border-radius:12px;" src="' . $track['link'] . '" width="500px" height="100px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></td>';
+                    if (isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin') {
+                        echo '<td>';
+                        echo '<a href="editTrack?' . $track['id'] . '" class="btn btn-primary btn-sm btn-flat" style="margin:2px;">Edit Track</a>';
+                        echo '<a href="deleteTrack?' . $track['id'] . '" class="btn btn-danger btn-sm btn-flat" style="margin:2px;">Delete Track</a>';
+                        echo '</td>';
+                    }
                     echo '</tr>';
                 }
 

@@ -377,7 +377,6 @@ h3 {
     width: 95%;
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
     height: 100px;
     align-items: center;
     font-size: 40px;
@@ -482,8 +481,10 @@ footer {
     /* Height of the footer */
 }
 
+
 /* Artist edit form */
+
 .form-container {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
