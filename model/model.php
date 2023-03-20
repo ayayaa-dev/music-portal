@@ -4,7 +4,7 @@
  */
 class Model {
     // список артистов
-    public static function getArtistList(){
+    public static function getArtists(){
         $sql = "SELECT * FROM `artists` ORDER BY `artists`.`name` ASC;";//Список
         $db = new database();
         $item = $db->getAll($sql);
@@ -40,13 +40,30 @@ class Model {
         $item = $db->getAll($sql);
         return $item;
     }
+
+    // GET albums by name
+    public static function getAlbumByName($name){
+        $sql = "SELECT * FROM `albums` WHERE `name` LIKE'".$name."' OR `name` LIKE '%".$name."%'";
+        $db = new database();
+        $item = $db->getAll($sql);
+        return $item;
+    }
+    
     // top 3 albums
     public static function getTopAlbums(){
         $sql = "SELECT * FROM `albums` ORDER BY RAND() LIMIT 3;";//Список
         $db = new database();
         $item = $db->getAll($sql);
         return $item;
-    }   
+    }
+    // Список треков
+    public static function getTracks()
+    {
+        $sql = "SELECT * FROM  `tracks` ORDER BY `tracks`.`name`";
+        $db = new database();
+        $item = $db->getAll($sql);
+        return $item;
+    }
     //Страница список треков по альбому
     public static function getTracksByAlbum($album_id) {
         $sql = "SELECT * FROM `tracks` WHERE `album_id` = '".$album_id."' ORDER BY `tracks`.`id` ASC"; //Список
@@ -54,29 +71,64 @@ class Model {
         $item = $db->getAll($sql);
         return $item;
     }
-
-    //search by code or name
-    public static function getArtistByName($name) {
-        $query = "SELECT * FROM `artist` WHERE `name`='".$name."' OR `name` LIKE '%".$name."%'";
-        //detail
+    // Search bar (wip)
+    public static function getTracksByAlbumName($name) {
+        $sql = "SELECT t.`id`, t.`name`, `time`, `link` FROM `tracks` AS t, `albums` AS al WHERE t.`album_id`=al.`id` AND al.`name` LIKE '".$name."' OR `name` LIKE '%".$name."%' ORDER BY t.`id`;"; //Список
         $db = new database();
-        $item = $db->getOne($query);
+        $item = $db->getOne($sql);
         return $item;
     }
-
-    public static function get3TrackByAlbum($albumid)
-    {
-        $sql = "SELECT `name`  FROM `Tracks` WHERE `album_id`= '" . $albumid . "' LIMIT 3";
+    
+    //search artist by name
+    
+    public static function getArtistByName($name) {
+        $query = "SELECT * FROM `artists` WHERE `name`='".$name."' OR `name` LIKE '%".$name."%'";
+        //detail
+        $db = new database();
+        $item = $db->getAll($query);
+        return $item;
+    }
+    //GET 3 tracks by artist on Album Page
+    public static function get3TrackByAlbum($album_id) {
+        $sql = "SELECT `name`, `time`  FROM `tracks` WHERE `album_id`= '" . $album_id . "' LIMIT 3";
         $db = new database();
         $item = $db->getAll($sql);
         return $item;
     }
+    // GET artist by id
+    public static function getArtistById($id) {
+        $sql = "SELECT * FROM `artists` WHERE `ID`='" . $id . "'";
+        $db = new database();
+        $item = $db -> getOne($sql);
+        return $item;
+    }
+    // GET album by id
+    public static function getAlbumById($id) {
+        $sql = "SELECT * FROM `albums` WHERE `ID`='".$id."'";
+        $db = new database();
+        $item = $db -> getOne($sql);
+        return $item;
+    }
 
-    // public static function getMusicPlayer($album_id){
-    //     $query  = "SELECT `link` FROM `track` WHERE `album_id` = '".$album_id."'";
-    //     $db = new database();
-    //     $item = $db->getOne($query);
-    //     return $item;
-    // }
+    //GET track by id
+    public static function getTrackById($id)
+    {
+        $sql = "SELECT * FROM `tracks` WHERE `ID`='" . $id . "'";
+        $db = new database();
+        $item = $db->getOne($sql);
+        return $item;
+    }
+    public static function getMusicPlayer(){
+        $query  = "SELECT `link` FROM `tracks` ORDER BY RAND() LIMIT 1";
+        $db = new database();
+        $item = $db->getOne($query);
+        return $item;
+    }
+    public static function getMusicPlayer2(){
+        $query  = "SELECT `link` FROM `tracks` ORDER BY RAND() LIMIT 1";
+        $db = new database();
+        $item = $db->getOne($query);
+        return $item;
+    }
 }//END CLASS
 ?>

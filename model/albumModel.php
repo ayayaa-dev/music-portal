@@ -1,5 +1,5 @@
 <?php
-class ModelAlbums {
+class AlbumModel {
 
     public static function getAlbums($code){
         $sql = "SELECT * FROM `albums` WHERE `id`='".$code."'";
@@ -8,7 +8,7 @@ class ModelAlbums {
         return $item;
     }
 
-    public static function albumsAddResult() {
+    public static function addAlbumResult() {
         $result = false;
         if(isset($_POST['send'])){
             $name = $_POST['name'];
@@ -25,7 +25,7 @@ class ModelAlbums {
         }
         return $result;
     }
-    public static function albumEditResult($id) {
+    public static function editAlbumResult($id) {
         $result = false;
         if(isset($_POST['send'])){
             $name = $_POST['name'];
@@ -41,11 +41,13 @@ class ModelAlbums {
         }
         return $result;
     }
-    public static function albumDeleteResult($id) {
+    public static function deleteAlbumResult($id) {
         $result = false;
         if(isset($_POST['send'])){
-            $sql = "UPDATE `albums` SET `status` = 0 WHERE `album`.`id` = '".$id."'";
+            $sql = "DELETE FROM `albums` WHERE `albums`.`id` = '".$id."'";
+            $sql2 = "DELETE FROM `tracks` WHERE `tracks`.`album_id` = '" . $id . "'";
             $database = new database();
+            $item = $database->executeRun($sql2);
             $item = $database -> executeRun($sql);
             if($item==true) $result = true;
         }

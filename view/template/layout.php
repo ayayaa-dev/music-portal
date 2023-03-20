@@ -15,8 +15,8 @@
 	<!-- header -->
 	<header>
 		<!-- navigation -->
-		<div class="navbar navbar-default" role="navigation">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:100px">
+		<div class="navbar navbar-default bg-dark" role="navigation">
+			<nav class="navbar navbar-expand-lg navbar-light" style="height:100px">
 				<!-- menu -->
 				<div class="collapse navbar-collapse" style="font-size: 20px; text-align: center; margin: 0 auto;height:100%">
 					<div class="img-logo" style="position:relative;overflow:hidden;height:100%">
@@ -31,21 +31,21 @@
 							if(!isset($_SESSION['sessionId'])){
 								echo '<li class="nav-item"><a class="nav-link" href="login">Log in</a></li>';
 							} else {
-								echo '<li class="nav-item"><a class="nav-link" href="logout">'.$_SESSION['name'].' - Log out</a></li>';
-								echo '<li class="nav-item"><a href="profile">- Profile</a></li>';
+								echo '<li class="nav-item"><a href="profile">Profile</a></li>';
+								echo '<li class="nav-item"><a class="nav-link" href="logout">Log out</a></li>';
 							}
-							if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
-								echo '<li class="nav-item"><a class="nav-link" href="countryList">Manage Artists</a></li>';
-								echo '<li class="nav-item"><a class="nav-link" href="cityList">Manage Albums</a></li>';
-							}
+							// if(isset($_SESSION['sessionId']) && $_SESSION['role'] == 'admin'){
+							// 	echo '<li class="nav-item"><a class="nav-link" href="artistsList">Manage Artists</a></li>';
+							// 	echo '<li class="nav-item"><a class="nav-link" href="albumsList">Manage Albums</a></li>';
+							// }
 						?>
 						</ul>
 					</div>
 				</div>		
 			</nav>
-			<form class="form-inline">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			<form action="search" method="GET" class="form-inline">
+				<input class="form-control mr-sm-2" type="text" name="text" placeholder="Search" aria-label="Search">
+				<button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
 			</form>
 		</div>
 		<!-- end navigation -->
@@ -78,10 +78,8 @@
 	<!-- footer -->
 	<footer>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p>Copyright &copy; 2023 Blackwell Music. Daniil Divissenko, Daniil Vassiljev, Viktoria Minaeva. JPTV20</p>					
-				</div>
+			<div class="col-md-12">
+				<p>Copyright &copy; 2023 Blackwell Music. Daniil Divissenko, Daniil Vassiljev, Viktoria Minaeva. JPTV20</p>					
 			</div>
 		</div>
 	</footer>

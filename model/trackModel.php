@@ -1,5 +1,5 @@
 <?php
-class ModelTracks {
+class TrackModel {
 
     public static function getTracks($id){
         $sql = "SELECT * FROM `Tracks` WHERE `id`='".$id."'";
@@ -9,7 +9,8 @@ class ModelTracks {
     }
 
 
-    public static function tracksAddResult() {
+    public static function addTrackResult()
+    {
         $result = false;
         if(isset($_POST['send'])){
             $name = $_POST['name'];
@@ -25,7 +26,8 @@ class ModelTracks {
         }
         return $result;
     }
-    public static function tracksEditResult($id) {
+    public static function editTrackResult($id)
+    {
         $result = false;
         if(isset($_POST['send'])){
             $name = $_POST['name'];
@@ -40,10 +42,11 @@ class ModelTracks {
         }
         return $result;
     }
-    public static function tracksDeleteResult($id) {
+    public static function deleteTrackResult($id)
+    {
         $result = false;
         if(isset($_POST['send'])){
-            $sql = "UPDATE `tracks` SET `status` = 0 WHERE `tracks`.`id` = '".$id."'";
+            $sql = "DELETE FROM `tracks` WHERE `tracks`.`id` = '" . $id . "'";
             $database = new database();
             $item = $database -> executeRun($sql);
             if($item==true) $result = true;

@@ -4,24 +4,50 @@ class Controller {
    public static function StartSite(){
       $albumList = Model::getTopAlbums();
       $artistList = Model::getTopArtistList();
-      // $musicPlayer = Model::getMusicPlayer($album_id);
+      $musicPlayer = Model::getMusicPlayer();
+      $musicPlayer2 = Model::getMusicPlayer2();
       include_once('view/homepage.php');
       return;
    }
    // Artist List
-   public static function ArtistPage(){
-      $artistList = Model::getArtistList();
-      include_once('view/artistsList.php');
+   public static function ArtistsPage(){
+      $artistList = Model::getArtists();
+      include_once('view/artistList.php');
+      return;
+   }
+   // Single artist info
+   public static function ArtistInfoPage($id){
+      $artist = Model::getArtistById($id);
+      $album = Model::getAlbumListByArtist($id);
+      include_once('view/artistInfo.php');
       return;
    }
    // Album List
-   public static function AlbumPage(){
+   public static function AlbumsPage(){
       $albumList = Model::getAlbums();
-      $trackList = Model::get3TrackByAlbum(9);
       include_once('view/albumList.php');
       return;
    }
-   // Error page
+   public static function AlbumSongs($album_id){
+      $trackList = Model::get3TrackByAlbum($album_id);
+      include_once('view/albumList.php');
+      return;
+   }
+   // Single album info
+   public static function AlbumInfoPage($id){
+      $album = Model::getAlbumById($id);
+      $tracks = Model::getTracksByAlbum($id);
+      include_once('view/albumInfo.php');
+      return;
+   }
+   // Search bar (wip)
+   public static function SearchByAlbum($name){
+      $albumList = Model::getAlbumByName($name);
+      $artistList = Model::getArtistByName($name);
+      // $tracks = Model::getTracksByAlbumName($name);
+      include_once('view/searchResult.php');
+      return;
+   }
    public static function error404(){
       include_once('view/error404.php');
       return;
