@@ -9,7 +9,7 @@ $title = "Add album";
     ?>
 </div>
 <div>
-    <form action="addAlbumResult?<?php echo $album['id']; ?>" method="POST">
+    <form action="addAlbumResult" method="POST">
         <div>
             <div class="col-md-12">
                 <div class="form-group">
@@ -20,7 +20,7 @@ $title = "Add album";
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="addAlbum">Genre:</label>
-                    <textarea class="form-control" name="description"></textarea>
+                    <textarea class="form-control" name="genre"></textarea>
                     <small>If you are using apostrophes symbol (') put backslash symbol (\) before it.</small>
                 </div>
             </div>
@@ -33,11 +33,11 @@ $title = "Add album";
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="addAlbum">Artist:</label>
-                    <select name="artists" class="form-control">
+                    <select name="artist_id" class="form-control">
                         <?php
                         $artistList = Model::getArtists();
                         foreach ($artistList as $artist) {
-                            echo '<option value="' . $artist . '">' . $artist['id'] . ' - ' . $artist['name'] . '</option>';
+                            echo '<option value="' . $artist['id'] . '">' . $artist['id'] . ' - ' . $artist['name'] . '</option>';
                         }
                         ?>
                     </select>
@@ -46,7 +46,7 @@ $title = "Add album";
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="addAlbum">Release date:</label>
-                    <input type="text" name="date" class="form-control" required>
+                    <input type="text" name="release_date" class="form-control" required>
                 </div>
             </div>
             <div class="col-md-12 text-center">
