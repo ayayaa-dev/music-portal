@@ -80,6 +80,7 @@ class Model {
     // }
     
     //search artist by name
+    
     public static function getArtistByName($name) {
         $query = "SELECT * FROM `artist` WHERE `name`='".$name."' OR `name` LIKE '%".$name."%'";
         //detail
