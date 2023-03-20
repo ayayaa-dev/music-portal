@@ -40,7 +40,7 @@ elseif ($route == 'artists') {
 		Controller::error404();
 	}
 }
-// search
+// Search bar (wip)
 // elseif ($route == 'search'){
 // 	if(isset($_GET['text'])) {
 // 		Controller::SearchByAlbum($_GET['text']);

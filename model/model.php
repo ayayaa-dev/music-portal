@@ -40,6 +40,15 @@ class Model {
         $item = $db->getAll($sql);
         return $item;
     }
+
+    // GET 1 album by name
+    // public static function getAlbumByName($name){
+    //     $sql = "SELECT * FROM `albums` WHERE `name` LIKE'".$name."' OR `name` LIKE '%".$name."%'";
+    //     $db = new database();
+    //     $item = $db->getOne($sql);
+    //     return $item;
+    // }
+    
     // top 3 albums
     public static function getTopAlbums(){
         $sql = "SELECT * FROM `albums` ORDER BY RAND() LIMIT 3;";//Список
@@ -62,8 +71,15 @@ class Model {
         $item = $db->getAll($sql);
         return $item;
     }
-
-    //search by code or name
+    // Search bar (wip)
+    // public static function getTracksByAlbumName($name) {
+    //     $sql = "SELECT t.`id`, `name`, `time`, `link` FROM `tracks` AS t, `albums` AS al WHERE t.`album_id`=al.`id` AND al.`name` LIKE '".$name."' OR `name` LIKE '%".$name."%' ORDER BY t.`id`;"; //Список
+    //     $db = new database();
+    //     $item = $db->getOne($sql);
+    //     return $item;
+    // }
+    
+    //search artist by name
     public static function getArtistByName($name) {
         $query = "SELECT * FROM `artist` WHERE `name`='".$name."' OR `name` LIKE '%".$name."%'";
         //detail
@@ -102,14 +118,13 @@ class Model {
         return $item;
     }
     public static function getMusicPlayer(){
-        $query  = "SELECT * FROM `tracks` ORDER BY RAND() LIMIT 1";
+        $query  = "SELECT `link` FROM `tracks` ORDER BY RAND() LIMIT 1";
         $db = new database();
         $item = $db->getOne($query);
         return $item;
     }
-    public static function getMusicPlayer2()
-    {
-        $query  = "SELECT * FROM `tracks` ORDER BY RAND() LIMIT 1";
+    public static function getMusicPlayer2(){
+        $query  = "SELECT `link` FROM `tracks` ORDER BY RAND() LIMIT 1";
         $db = new database();
         $item = $db->getOne($query);
         return $item;
