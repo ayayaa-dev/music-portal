@@ -13,7 +13,7 @@ class TrackController
         if ($result == true) {
             $trackList = Model::getTracks();
             $_SESSION['message'] = 'New track has been added successfully!';
-            header('Location:tracks');
+            header('Location:albums');
         } else {
             $error = 'Failed to add tracks!';
             include_once('view/Tracks/addTrackForm.php');
@@ -33,7 +33,7 @@ class TrackController
         if ($result == true) {
             $_SESSION['message'] = 'Track with id: ' . $id . 'has been edited successfully!';
             $trackList = Model::getTracks();
-            header('Location:tracks');
+            header('Location:albums');
         } else {
             $trackList = Model::getTrackById($id);
             $error = 'Failed to edit track!';
@@ -53,7 +53,7 @@ class TrackController
         if ($result == true) {
             $_SESSION['message'] = 'Track with id: ' . $id . 'has been deleted successfully!';
             $trackList = Model::getTracks();
-            header('Location:track');
+            header('Location:albums');
         } else {
             $trackList = Model::getTrackById($id);
             $error = 'Failed to delete track!';
