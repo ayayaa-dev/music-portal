@@ -41,12 +41,12 @@ class Controller {
       return;
    }
    // Search bar (wip)
-   // public static function SearchByAlbum($name){
-   //    $album = Model::getAlbumByName($name);
-   //    $tracks = Model::getTracksByAlbumName($name);
-   //    include_once('view/albumInfo.php');
-   //    return;
-   // }
+   public static function SearchByAlbum($name){
+      $album = Model::getAlbumByName($name);
+      $tracks = Model::getTracksByAlbumName($name);
+      include_once('view/albumInfo.php');
+      return;
+   }
    public static function error404(){
       include_once('view/error404.php');
       return;

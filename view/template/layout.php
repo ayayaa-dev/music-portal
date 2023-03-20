@@ -15,8 +15,8 @@
 	<!-- header -->
 	<header>
 		<!-- navigation -->
-		<div class="navbar navbar-default" role="navigation">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:100px">
+		<div class="navbar navbar-default bg-dark" role="navigation">
+			<nav class="navbar navbar-expand-lg navbar-light" style="height:100px">
 				<!-- menu -->
 				<div class="collapse navbar-collapse" style="font-size: 20px; text-align: center; margin: 0 auto;height:100%">
 					<div class="img-logo" style="position:relative;overflow:hidden;height:100%">
@@ -45,7 +45,7 @@
 			</nav>
 			<form action="search" method="GET" class="form-inline">
 				<input class="form-control mr-sm-2" type="text" name="text" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				<button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
 			</form>
 		</div>
 		<!-- end navigation -->

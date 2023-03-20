@@ -41,13 +41,13 @@ elseif ($route == 'artists') {
 	}
 }
 // Search bar (wip)
-// elseif ($route == 'search'){
-// 	if(isset($_GET['text'])) {
-// 		Controller::SearchByAlbum($_GET['text']);
-// 	} else {
-// 		Controller::error404();	
-// 	}
-// }
+elseif ($route == 'search'){
+	if(isset($_GET['text'])) {
+		Controller::SearchByAlbum($_GET['text']);
+	} else {
+		Controller::error404();	
+	}
+}
 
 // user Login
 elseif ($route == 'login'){

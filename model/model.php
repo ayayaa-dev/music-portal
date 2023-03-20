@@ -42,12 +42,12 @@ class Model {
     }
 
     // GET 1 album by name
-    // public static function getAlbumByName($name){
-    //     $sql = "SELECT * FROM `albums` WHERE `name` LIKE'".$name."' OR `name` LIKE '%".$name."%'";
-    //     $db = new database();
-    //     $item = $db->getOne($sql);
-    //     return $item;
-    // }
+    public static function getAlbumByName($name){
+        $sql = "SELECT * FROM `albums` WHERE `name` LIKE'".$name."' OR `name` LIKE '%".$name."%'";
+        $db = new database();
+        $item = $db->getOne($sql);
+        return $item;
+    }
     
     // top 3 albums
     public static function getTopAlbums(){
@@ -72,12 +72,12 @@ class Model {
         return $item;
     }
     // Search bar (wip)
-    // public static function getTracksByAlbumName($name) {
-    //     $sql = "SELECT t.`id`, `name`, `time`, `link` FROM `tracks` AS t, `albums` AS al WHERE t.`album_id`=al.`id` AND al.`name` LIKE '".$name."' OR `name` LIKE '%".$name."%' ORDER BY t.`id`;"; //Список
-    //     $db = new database();
-    //     $item = $db->getOne($sql);
-    //     return $item;
-    // }
+    public static function getTracksByAlbumName($name) {
+        $sql = "SELECT t.`id`, t.`name`, `time`, `link` FROM `tracks` AS t, `albums` AS al WHERE t.`album_id`=al.`id` AND al.`name` LIKE '".$name."' OR `name` LIKE '%".$name."%' ORDER BY t.`id`;"; //Список
+        $db = new database();
+        $item = $db->getOne($sql);
+        return $item;
+    }
     
     //search artist by name
     
