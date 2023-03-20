@@ -42,9 +42,10 @@ class Controller {
    }
    // Search bar (wip)
    public static function SearchByAlbum($name){
-      $album = Model::getAlbumByName($name);
-      $tracks = Model::getTracksByAlbumName($name);
-      include_once('view/albumInfo.php');
+      $albumList = Model::getAlbumByName($name);
+      $artistList = Model::getArtistByName($name);
+      // $tracks = Model::getTracksByAlbumName($name);
+      include_once('view/searchResult.php');
       return;
    }
    public static function error404(){

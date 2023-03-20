@@ -41,11 +41,11 @@ class Model {
         return $item;
     }
 
-    // GET 1 album by name
+    // GET albums by name
     public static function getAlbumByName($name){
         $sql = "SELECT * FROM `albums` WHERE `name` LIKE'".$name."' OR `name` LIKE '%".$name."%'";
         $db = new database();
-        $item = $db->getOne($sql);
+        $item = $db->getAll($sql);
         return $item;
     }
     
@@ -82,10 +82,10 @@ class Model {
     //search artist by name
     
     public static function getArtistByName($name) {
-        $query = "SELECT * FROM `artist` WHERE `name`='".$name."' OR `name` LIKE '%".$name."%'";
+        $query = "SELECT * FROM `artists` WHERE `name`='".$name."' OR `name` LIKE '%".$name."%'";
         //detail
         $db = new database();
-        $item = $db->getOne($query);
+        $item = $db->getAll($query);
         return $item;
     }
     //GET 3 tracks by artist on Album Page
