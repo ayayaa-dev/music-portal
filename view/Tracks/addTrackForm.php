@@ -9,7 +9,7 @@ $title = "Add track";
     ?>
 </div>
 <div>
-    <form action="addTrackResult?<?php echo $track['id']; ?>" method="POST">
+    <form action="addTrackResult" method="POST">
         <div>
             <div class="col-md-12">
                 <div class="form-group">

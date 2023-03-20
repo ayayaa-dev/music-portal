@@ -36,13 +36,16 @@ class ArtistModel {
 
     public static function deleteArtistResult($id) {
         $result = false;
-        if(isset($_POST['send'])){
-            //запрос на удаление данных
-
-            $sql = "DELETE FROM `artists` WHERE `artists`.`id` = '".$id."'";
+        if (isset($_POST['send'])) {
             $database = new database();
-            $item = $database -> executeRun($sql);
-            if($item==true) $result = true;
+            $sql = $database->getAll("SELECT * FROM `albums` WHERE `albums`.`artist_id` = $id");
+            foreach ($sql as $album) {
+                $sql2 = $database->executeRun("DELETE FROM `tracks` WHERE `tracks`.`album_id` = $album[id]");
+                $sql3 = $database->executeRun("DELETE FROM `albums` WHERE `albums`.`artist_id` = $id");
+            }
+            $sql4 = $database->executeRun("DELETE FROM `artists` WHERE `artists`.`id` = $id");
+
+            if ($sql4 == true) $result = true;
         }
         return $result;
     }
